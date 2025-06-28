@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/temple-of-artemis.jpg';
+import ephesus2 from 'src/assets/images/temple-of-artemis2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'The Temple of Artemis',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="The Temple of Artemis"
+    subtitle="The Temple of Artemis: Unraveling the Mysteries of an Ancient Wonder"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled in the ancient city of Ephesus, in what is now modern-day Turkey, stands the remnants
+     of one of the most remarkable structures of the ancient world: the Temple of Artemis. 
+     Also known as the Artemision, this grand edifice was dedicated to Artemis, 
+     the Greek goddess of hunting, wilderness, and fertility, and was revered as one of the
+      Seven Wonders of the Ancient World.
+</p> <br>
+<p class="text-base">  The origins of the Temple of Artemis date back to the Bronze Age,
+     with the earliest known sanctuary on the site dating to around the 10th century BCE.
+      However, it was during the Archaic period that the temple began to take shape as
+       a monumental structure, reflecting the growing importance of Artemis in the region.
+</p> <br>  
+<p class="text-base">   The first temple was constructed around 800 BCE, but it was 
+    subsequently destroyed by a flood. In the 6th century BCE, the Lydian king Croesus funded
+     the construction of a new, larger temple, designed by the architect Chersiphron 
+     nd his son Metagenes. This temple, completed around 550 BCE, was a marvel of ancient
+      architecture, boasting a grand colonnade, intricate carvings, and richly adorned interiors.
+</p> <br>   
+<p class="text-base">   The Temple of Artemis underwent several renovations and expansions 
+    over the centuries, each iteration more magnificent than the last. The most famous version 
+    of the temple, often referred to as the "Great Artemision," was commissioned by the Lydian
+     king Croesus and completed around 550 BCE. This temple was supported by 127 towering columns, 
+     each standing over 18 meters tall, and adorned with elaborate sculptures and reliefs.
+</p> <br>  
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/> 
+
+<p class="text-base">
+The temple's significance extended far beyond its architectural splendor. As the focal
+ point of Artemis worship, it served as a center of religious and cultural life in Ephesus.
+  Pilgrims from across the ancient world would flock to the temple, seeking the blessings
+   of Artemis for fertility, protection, and prosperity. The temple's vast wealth,
+    accumulated through offerings and donations from devotees, made it one of the richest 
+    and most powerful religious institutions of its time.
+</p> <br>
+<p class="text-base">    
+Despite its grandeur and significance, the Temple of Artemis was not immune to destruction.
+ It was razed to the ground by arson in 356 BCE, allegedly by a man named Herostratus
+  who sought to immortalize his name through the destruction of the temple. However,
+   the Ephesians were determined to rebuild, and construction on a new temple began shortly 
+   thereafter.
+</p> <br>
+<p class="text-base">
+The second temple, completed around 323 BCE, was even larger and more magnificent 
+than its predecessor. It featured even more elaborate decorations, including sculptures by
+ renowned artists such as Praxiteles and Scopas. This temple stood for several centuries 
+ until it was finally destroyed by invading Goths in 262 CE.
+</p> <br>
+<p class="text-base">
+Today, little remains of the Temple of Artemis except for a few scattered ruins and columns.
+ However, its legacy lives on in the annals of history, as a testament to the ingenuity,
+  creativity, and devotion of the ancient civilizations that once thrived in Ephesus. 
+  Despite its physical absence, the Temple of Artemis continues to inspire wonder and awe, 
+  reminding us of the enduring power of human endeavor and the enduring legacy of the gods.
+</p> <br>
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

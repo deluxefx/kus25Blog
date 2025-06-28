@@ -1,0 +1,121 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/virgin-mary-house-inside.jpg';
+import ephesus2 from 'src/assets/images/virgin-mary-house.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'House of the Virgin Mary',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="House of the Virgin Mary"
+    subtitle="A Sanctuary of Spiritual Pilgrimage"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled amidst the serene hills near Ephesus in Turkey lies a place of profound spiritual 
+    significance - the House of the Virgin Mary. Believed by many Christians to be the final home
+     of Mary, the mother of Jesus, this humble abode has become a sanctuary of pilgrimage,
+      drawing visitors from all corners of the globe who seek solace, reflection, and spiritual 
+      renewal.
+</p> <br>
+    <p class="text-base">
+    According to Christian tradition, after the crucifixion of Jesus, 
+    the apostle John took Mary into his care and accompanied her to Ephesus, where
+     she spent her final years in seclusion and prayer. It is here, nestled in the tranquil
+      setting of the Bülbüldağı mountain, that the House of the Virgin Mary is said to have stood.
+</p> <br>
+    <p class="text-base">
+    The history of the House of the Virgin Mary is steeped in legend and reverence.
+     While there is no definitive historical evidence to confirm its authenticity,
+      the site has been venerated as a place of pilgrimage for centuries,
+       with numerous accounts of miraculous healings and divine encounters reported
+        by pilgrims over the years.
+</p> <br>
+    <p class="text-base">
+    The modest stone house, reconstructed over time, reflects the simple
+     life that Mary is believed to have led during her time in Ephesus. Visitors to
+      the site can explore the interior of the house, which consists of a small chapel 
+      adorned with religious icons and symbols, as well as an alcove believed to
+       be the bedroom of Mary.
+</p> <br>
+
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/> 
+
+<p class="text-base">
+    Outside the house, a tranquil garden invites contemplation and prayer,
+     with benches scattered amidst the olive trees and fragrant flowers. 
+     Many pilgrims take the opportunity to pause and reflect in this peaceful setting, 
+     offering prayers and petitions for healing, guidance, and spiritual blessings.
+</p> <br>
+    <p class="text-base">
+    The House of the Virgin Mary holds special significance for Catholics, Orthodox Christians,
+     and Muslims alike. Catholics, in particular, have long revered the site as a place 
+     of Marian devotion, with Pope Paul VI officially recognizing it as a place of pilgrimage 
+     in 1967. Since then, thousands of faithful pilgrims have made the journey to Ephesus
+      to pay homage to Mary and seek her intercession.
+</p> <br>
+    <p class="text-base">
+    Visiting the House of the Virgin Mary is not only a spiritual experience but also
+     a cultural and historical one. The site offers insight into the religious traditions
+      and beliefs that have shaped the region for centuries, serving as a testament 
+      to the enduring legacy of Mary and her role in the Christian faith.
+</p> <br>
+    <p class="text-base">
+    For many pilgrims, a visit to the House of the Virgin Mary is a deeply personal 
+    and transformative journey, offering an opportunity to connect with the divine and experience
+     a profound sense of peace and serenity. Whether seeking solace, healing, or
+      simply a moment of quiet reflection, the House of the Virgin Mary continues
+       to inspire and uplift all who make the pilgrimage to this sacred site.
+    
+</p> <br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

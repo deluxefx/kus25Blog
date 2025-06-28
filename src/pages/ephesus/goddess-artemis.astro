@@ -1,0 +1,91 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/goddess-artemis.jpg';
+import ephesus2 from 'src/assets/images/goddess-artemis2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Goddess Artemis',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Goddess Artemis"
+    subtitle="Artemis of Ephesus: Unraveling the Mysteries of an Ancient Goddess"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    At the heart of Ephesian culture stood the magnificent Temple of Artemis, one of the Seven Wonders of the Ancient World. Central to this temple was the veneration of Artemis, a revered goddess whose origins date back to ancient Greek mythology.
+</p> 
+<br>
+<p class="text-base"> Artemis, known as the goddess of the hunt, wilderness, and childbirth, held a special place in the hearts of the Ephesians. Depicted as a powerful and enigmatic figure, she embodied both the nurturing aspects of nature and the fierce prowess of a hunter. However, the Artemis worshipped in Ephesus was unique, bearing distinct characteristics that set her apart from her Greek counterpart.
+</p> 
+<br>
+<p class="text-base">  The Artemis of Ephesus, often referred to as the Ephesian Artemis or the Great Mother Goddess, was depicted in a form unlike any other. Instead of the traditional representation of a slender, youthful huntress, she was portrayed as a multi-breasted figure adorned with symbols of fertility and abundance. This iconic image, with multiple rows of breasts symbolizing nourishment and fertility, captured the essence of the nurturing aspect of the goddess.
+</p> 
+<br>  
+
+
+
+
+<br>
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+<p class="text-base">
+The significance of Artemis in Ephesus extended beyond her role as a fertility deity. She was also worshipped as a protector of the city and its people, safeguarding them from harm and ensuring their prosperity. The Temple of Artemis, a grand structure adorned with intricate carvings and adorned with offerings from devotees, served as a focal point for religious ceremonies and rituals dedicated to the goddess.
+</p> 
+<br>   
+<p class="text-base">
+The cult of Artemis in Ephesus was not confined to the temple alone. Throughout the city, numerous statues, shrines, and sacred sites honored the goddess, reinforcing her importance in daily life. Devotees would make pilgrimages to these sites, seeking Artemis's blessings for everything from childbirth to bountiful harvests.
+</p> 
+<br>
+<p class="text-base">
+The worship of Artemis in Ephesus also intersected with other religious traditions, reflecting the city's diverse cultural influences. As Ephesus grew and prospered, it became a melting pot of different beliefs and practices, resulting in a syncretic approach to religion. The cult of Artemis absorbed elements from various faiths, creating a rich tapestry of rituals and beliefs centered around the goddess.
+</p> 
+<br>
+ 
+<br>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

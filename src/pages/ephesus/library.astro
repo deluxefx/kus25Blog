@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/ephesus-library.jpg';
+import ephesus2 from 'src/assets/images/ephesus-library2.jpg';
+import ephesus3 from 'src/assets/images/ephesus-library3.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Ephesus Library',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Library of Celsus in Ephesus"
+    subtitle="Celsus Library is one of the most beautiful structures in Ephesus."
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    Constructed in the 2nd century AD, the Celsus Library stands as a tribute to Tiberius Julius 
+    Celsus Polemaeanus, a prominent Roman consul and governor of the Asian province. 
+    His son, Tiberius Julius Aquila, commissioned the library as a mausoleum to honor
+     his father's legacy and intellect. The library's completion around 117 AD marked 
+     a significant milestone in Ephesus's architectural and scholarly history.
+
+
+</p> 
+<br>
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+<p class="text-base">
+
+    The library's facade, adorned with intricate carvings and statues, reflects the grandeur
+     of Roman architecture. Four towering columns flank the entrance, each crowned with 
+     ornate Corinthian capitals. Statues of wisdom (Sophia), knowledge (Episteme), 
+     intelligence (Ennoia), and virtue (Arete) adorn the niches between the columns,
+      symbolizing the values enshrined within the library's walls.
+</p> 
+<br>
+
+<p class="text-base">
+    Beyond its impressive exterior lies a treasure trove of ancient knowledge. 
+    The Celsus Library housed thousands of scrolls and manuscripts, making it one of the largest 
+    repositories of knowledge in the ancient world. Scholars and philosophers from far and wide
+     flocked to Ephesus to peruse its vast collection, seeking enlightenment and wisdom.
+</p> 
+<br>
+<p class="text-base">  The interior of the library, although partially reconstructed, evokes a sense
+     of reverence and awe. Marble shelves once held the precious scrolls, while niches in 
+     the walls provided space for statues of literary figures and deities. The central nave,
+      illuminated by natural light streaming in through the windows, served as a gathering place 
+      for scholars and students alike.
+</p> 
+<br> 
+<p class="text-base">   Despite facing destruction over the centuries, the Celsus Library endures
+     as a symbol of Ephesus's enduring legacy. Restorations and archaeological efforts have
+      preserved its majestic facade and restored portions of its interior, allowing visitors
+       to glimpse into the intellectual richness of antiquity.
+</p> 
+<Image src={ephesus3} alt="Ephesus" class="rounded-md mb-4"/>  
+<br> 
+<p class="text-base">    Today, the Celsus Library stands as a UNESCO World Heritage Site, drawing 
+    visitors from across the globe to marvel at its architectural splendor and historical significance.
+     It serves not only as a reminder of Ephesus's glorious past but also as a testament to
+      the enduring power of knowledge and culture. As visitors wander through its hallowed halls, 
+      they are transported back in time, connecting with the scholars and sages who once roamed
+       these ancient streets.
+</p> 
+<br>  
+<p class="text-base">  In a world constantly evolving, the Celsus Library remains a beacon
+     of intellectual curiosity and enlightenment, inviting all who enter to embark on a journey 
+     of discovery and wonder.
+    </p> 
+    <br>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

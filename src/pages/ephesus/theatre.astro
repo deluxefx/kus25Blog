@@ -1,0 +1,97 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/ephesus-theatre.jpg';
+import ephesus2 from 'src/assets/images/ephesus-theatre2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Ephesus Theatre',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Great Theatre in Ephesus"
+    subtitle="The magnificent theater of Ephesus stands as a remarkably well-preserved and awe-inspiring structure."
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    The grand theater of Ephesus stands as an impeccably preserved and truly 
+    remarkable architectural marvel. Constructed predominantly from marble, this imposing
+     structure boasts a width spanning 145 meters, with its seating area once accommodating 
+     up to 24,000 spectators.
+    </p> 
+    <br>
+    <p class="text-base">
+    Originating in Hellenistic times, the theater underwent significant expansion during
+     the Roman era under Emperor Claudius (41-54 AD). Notable enhancements
+      included the construction of a two-storey stage (skene) during the reign of Emperor Nero
+       (54-68 AD), with a third storey added later in the mid-2nd century. 
+       The completion of its construction occurred under Emperor Trajan (98-117 AD). Notably,
+        an aqueduct was engineered in the early 2nd century AD to supply water to Ephesus,
+         with its trajectory necessitating a channel through the upper seats for 
+         the Trajan nymphaeum.
+
+
+</p> 
+<br>
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+<p class="text-base">
+
+    This theater, a blend of Hellenistic and Roman design, underwent seismic events and 
+    subsequent repairs throughout its history. While often associated with St. Paul's visit to
+     Ephesus, historical evidence suggests he did not preach there during the unrest.
+</p> 
+<br>
+
+<p class="text-base">
+
+    Excavations began before WWI, with extensive restoration efforts undertaken later. 
+    The theater remains a testament to Ephesus' rich cultural heritage, attracting 
+    visitors from around the world.
+</p> 
+<br>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

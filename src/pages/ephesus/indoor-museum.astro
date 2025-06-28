@@ -1,0 +1,78 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/ephesus-museum.jpg';
+import ephesus2 from 'src/assets/images/ephesus-museum2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Ephesus Indoor Museum',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Ephesus Indoor Museum"
+    subtitle="Exploring the Indoor Museum"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    The Museum of Ephesus, located in the Selcuk district, showcases artifacts 
+    unearthed during excavations in Ephesus since 1964. Expanded in 1976, the museum 
+    houses a collection of sculptures, including those from the Temple of Augustus (or Isis), 
+    as well as a marble sundial from the 3rd century A.D. Notable exhibits include frescoes
+     depicting Socrates and sculptural elements from fountains, such as the Warrior's Rest
+      marble and a head of Zeus. Additionally, the museum features findings from tombs and 
+      representations of the Ephesian Artemis, including the Great Artemis sculpture. 
+      Among the highlights are sculptured friezes from the Temple of Hadrian, 
+      relocated to protect them from the elements.
+
+
+</p> 
+<br>
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

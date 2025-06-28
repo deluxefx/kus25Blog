@@ -1,0 +1,93 @@
+---
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import ephesus from 'src/assets/images/ephesus.jpg';
+
+const metadata = {
+  title: 'Ephesus Info',
+};
+---
+
+<Base meta_title="Ephesus Info">
+  <Page title="Ephesus">
+      <Hero
+    tagline=""
+    title="Ephesus"
+    subtitle="Exploring Ephesus: Unraveling the Ancient Wonders of Turkey"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+<p class="text-base">
+    Ephesus, located just 18 kilometers away from Kusadasi,
+     stands as one of the most remarkable ancient cities in the world.
+      Built by Attic and Ionian Greek colonists in the 10th century BC,
+       Ephesus holds a significant place as a UNESCO World Heritage site.
+       Renowned for its proximity to the Temple of Artemis, one of 
+       the Seven Wonders of the Ancient World, Ephesus is steeped in historical
+        and cultural significance. It also holds significance for Christians, 
+        as one of the seven churches of Asia Minor.
+
+
+</p> 
+<br>
+
+<p class="text-base">
+
+    The original location of Ancient Ephesus likely rested on the Aegean coast, 
+    approximately 8 kilometers from the current archaeological excavations. Over time, 
+    sedimentation from the Kucuk Menderes River has expanded the surrounding alluvial plain, 
+    shifting the coastline away from the archaeological zone. In Roman times, Ephesus thrived 
+    on the northern slopes of the hills Coressus and Pion, south of the Cayster River.
+     Despite changes to the coastline, Ephesus remains a testament to the grandeur
+      of ancient civilizations.
+</p> 
+<br>
+
+<p class="text-base">
+    Ephesus is often hailed as one of the premier outdoor museums in Turkey, 
+    and perhaps the world. Its ties to Amazonian legends and myths have persisted
+     throughout history, evidenced by a competition for a statue of an
+      Amazon for the Temple of Artemis in the 5th century BC. Historical records
+       from the Hittites of the 14th and 13th centuries BC mention the town of Apasas,
+        believed to be Ephesus. Recent excavations near Ayasuluk (Selcuk)
+         castle have revealed artifacts dating back to the second millennium BC, 
+         further affirming Ephesus's ancient origins.
+    </p> 
+    <br>
+
+    <p class="text-base">
+        Throughout its history, Ephesus faced numerous challenges, including attacks by the
+         Cimmerians in the 7th century BC and destruction by the Goths in 262 AD.
+          Despite these setbacks, Ephesus experienced periods of prosperity under 
+          the rule of various empires, including the Lydians, Persians, and Romans. 
+          Notably, Emperor Augustus declared Ephesus a metropolis during Roman rule.
+           However, the city never fully recovered after the Gothic invasion, 
+           leading to a decline in its importance.
+</p> 
+<br>
+<p class="text-base">
+Today, Ephesus stands as a captivating archaeological site, offering visitors 
+a glimpse into the splendor of ancient civilizations. Its well-preserved ruins and 
+historical significance continue to attract tourists from around the globe, making it a 
+must-visit destination for history enthusiasts and cultural aficionados alike.
+</p> 
+<br>
+
+
+
+
+
+
+
+    </section>
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+
+  </Page>
+</Base>
+

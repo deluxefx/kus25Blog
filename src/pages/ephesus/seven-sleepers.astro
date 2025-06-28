@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/seven-sleepers.jpg';
+import ephesus2 from 'src/assets/images/seven-sleepers2.jpg';
+import ephesus3 from 'src/assets/images/seven-sleepers3.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'The Seven Sleepers of Ephesus',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="The Seven Sleepers of Ephesus"
+    subtitle="A Tale of Faith and Divine Intervention"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Deep within the annals of ancient Ephesian folklore lies a story shrouded in mystery and wonder
+     - the legend of the Seven Sleepers. This tale, rooted in both Christian and Islamic traditions,
+     recounts the miraculous events surrounding seven young men who, fleeing persecution
+      for their faith, sought refuge in a cave and emerged centuries later to find a world 
+      transformed.
+<br><br>
+    According to legend, during the reign of the Roman emperor Decius in the 3rd century CE,
+     seven Christian youths from Ephesus refused to renounce their faith and worship the Roman gods.
+      Fearing persecution and death, they sought refuge in a cave on the outskirts of the city. 
+      As they entered the cave, they prayed fervently to God for protection and guidance.
+    <br><br>
+    Divine intervention soon followed, as God caused the seven youths to fall into a deep sleep,
+     sealing the entrance of the cave with a miraculous rock. Inside the cave, 
+     the youths remained in a state of suspended animation for what they believed to be only a 
+     few hours. Little did they know that centuries were passing outside the confines of 
+     their rocky sanctuary.
+    
+    
+</p> <br>
+
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/> 
+
+<p class="text-base">
+    Meanwhile, the world around them was undergoing profound changes. 
+    Christianity had spread throughout the Roman Empire, and the once-pagan city 
+    of Ephesus had become a center of Christian worship. The Roman Empire itself had crumbled,
+     giving way to new kingdoms and empires.
+     <br><br>
+    It wasn't until around 250 years later that the miraculous story of the Seven Sleepers came to 
+    light. During the reign of the Christian Byzantine emperor Theodosius II in the
+     5th century CE, the cave containing the sleeping youths was accidentally discovered 
+     during construction work. As the entrance was unsealed, the seven sleepers awoke, 
+     believing that they had only slept for a day.
+     <br><br>
+    Emerging from their long slumber, the seven youths ventured into the city of 
+    Ephesus, expecting to find their families and fellow believers. Instead,
+    they were greeted by a world vastly different from the one they had left behind. 
+    The once-pagan city was now adorned with Christian churches, and the Christian
+     faith had become the dominant religion of the land.
+     <br><br>
+    News of their miraculous awakening spread quickly throughout the city, and 
+    the Seven Sleepers soon became revered as symbols of faith and divine protection. 
+    They recounted their incredible story to the amazed inhabitants of Ephesus, 
+    confirming the power of God and the endurance of faith in the face of adversity.
+    <br><br>
+    In both Christian and Islamic traditions, the legend of the Seven Sleepers has been
+     passed down through generations, inspiring countless believers with its message
+      of steadfast faith and divine intervention. Today, the cave of the Seven Sleepers 
+      remains a popular pilgrimage site in Ephesus, where visitors can pay homage to these 
+      legendary figures and reflect on the enduring power of faith.
+</p> <br>
+<Image src={ephesus3} alt="Ephesus" class="rounded-md mb-4"/> 
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

@@ -1,0 +1,277 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/ephesus2.jpg';
+import ephesus3 from 'src/assets/images/ephesus3.jpg';
+import ephesus4 from 'src/assets/images/ephesus4.jpg';
+import ephesus5 from 'src/assets/images/ephesus5.jpg';
+import ephesus6 from 'src/assets/images/ephesus6.jpg';
+import ephesus7 from 'src/assets/images/ephesus7.jpg';
+import ephesus8 from 'src/assets/images/ephesus8.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Ephesus Ruins',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Ephesus Ruins"
+    subtitle="Exploring Ephesus: Unraveling Turkey's Ancient Treasures"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+  Ephesus, situated a mere 18 kilometers from Kusadasi, is celebrated as a prominent ancient
+   metropolis globally. Established by Attic and Ionian Greek settlers around the 10th century
+    BC, Ephesus boasts UNESCO World Heritage status. Notably recognized for its adjacency 
+    to the Temple of Artemis, one of the Seven Wonders of the Ancient World, Ephesus is
+     rich in historical and cultural importance. Additionally, it holds religious significance 
+     for Christians, being one of the seven churches of Asia Minor.
+
+
+
+
+
+
+
+
+</p> 
+<br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Odeion</h2>
+<p class="text-base">
+This semi-circular edifice, also referred to as the Small Theatre, was originally 
+constructed around 150 A.D. as a bouleuterion (council chamber) by Publius Vedius Antonius
+ and his wife FlaviaPapiana, prominent members of the Ephesus community. Originally 
+ designed to accommodate 1400 seated spectators, it served dual purposes as both a bouleuterion
+  and a small covered theater. Consisting of three main sections—cavea (auditorium),
+   orchestra (acting area), and skene (stage building)—typical of theaters of its time, 
+   the Odeion showcased fine craftsmanship in its marble seating. The skene, likely two-storeyed, 
+   featured a narrow marble podium in front with five doors opening onto the pedium,
+    the central door being taller and wider. The semi-circular orchestra, lacking rainwater gutters,
+     suggests that the Odeion was roofed. It functioned as both an Odeon for concerts 
+     and a bouleterion for council meetings.
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Temples of the Goddess Rome and Divine Caesar</h2>
+ 
+<p class="text-base">
+    In the time of Augustus, the influence of Imperial Roman cults had spread across many provinces in Asia Minor. The cult of the Emperor thrived in Nicomedia and Pergamum, alongside reverence for the Goddess Rome. It was Octavius, later known as Emperor Augustus, who conceived the idea of constructing a temple to honor the Goddess Rome and Julius Caesar, whose divine attributes were esteemed. During a visit to the Asiatic province in 29 B.C., Augustus sanctioned the construction of this sanctuary.
+<br><br>
+    Located near the Prytaneion, the temple became a focal point for Romans residing in the province and served as a testament to Ephesus's significant role in the political and administrative landscape of the Roman Empire in that region.
+    <br><br>
+    The architectural style of these temples, typical of Ancient Rome but rare in Greece and Asia Minor, remains evident in the remains found near the Odeion today.
+</p>
+
+
+<Image src={ephesus3} alt="Ephesus" class="rounded-md mb-4"/>   
+
+<h2 class="text-2xl font-extrabold dark:text-white">Prytaneion</h2>
+<p class="text-base">
+    The Prytaneion, originally built in the 3rd century B.C., underwent its final modifications
+     during the reign of Emperor Augustus. After being damaged and dismantled, some 
+     of its architectural elements, including columns, were repurposed in the construction 
+     of the Scholastika Baths. However, during subsequent excavations, these elements were
+      restored to their original location within the Prytaneion. Flanking the road between 
+      the Prytaneion and Domitian Square are statue bases adorned with figures.
+      <br><br>
+    In antiquity, the Prytaneion functioned akin to a modern town hall, hosting public functions,
+     receptions, and banquets. Within the adjacent Temple of Hestia Boulaia,
+      a perpetual sacred fire, tended by the Pritanei priests, symbolized civic worship and 
+      sacrificial rituals.
+      <br><br>
+    Adjacent to this unique structure stands a triangular architectural feature originating 
+    from the Door of Heracles, situated at the entrance of Kuretes Street.
+     Prominently featured in the sculptural depiction is Winged Nike, the Goddess of Victory, 
+     holding a braided crown in her left hand.
+</p><br>
+
+<Image src={ephesus4} alt="Ephesus Nike Wing" class="rounded-md mb-4"/>   
+
+
+<h2 class="text-2xl font-extrabold dark:text-white">The Pollio Fountain</h2>
+<p class="text-base">
+    The structure described is located east of Domitian Square, 
+    next to the western side of the Agora. It features a wide and high arch supporting a
+     triangular pediment, along with a small pool. Water flowed into the pool through 
+     a semi-circular apsidal wall facing the Agora. The Polyphemus group statue, 
+     currently exhibited in the Ephesus Museum, was discovered in this pool on a 
+     pedestal designed to fit the apsidal wall. Originally situated on the pediment 
+     of the Temple of Isis in the Agora, these statues were relocated following 
+     the temple's collapse. The group statue depicts one of Odysseus's adventures in
+      the Aegean, specifically his encounter with Polyphemus, the son of Poseidon.
+       According to an inscription, Sextilius Pollia constructed the fountain in 97 A.D.
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Temple of Domitian</h2>
+<p class="text-base">
+    Emperor Domitian (81-96) granted Ephesus the temple wardenship for the first time, 
+    leading to the construction of a temple dedicated to him on a terrace measuring 50 by 100
+     meters on the south side of Domitian Square. Little remains of the temple today, with our 
+     knowledge primarily based on the foundation remains. The podium supporting the temple 
+     measured 24 by 34 meters and featured a small prostyle design, characterized by eight
+      columns on the short sides and thirteen columns on the long sides. Additionally,
+       there were four columns in front of the cella, which measured 9 by 17 meters. Adjacent 
+       to the terrace, there was a row of storerooms to the west and on the side facing the square. 
+       A parapet consisting of two tiers of columns adorned the structure, with reliefs 
+       discovered elsewhere in the city and subsequently relocated to their original positions.
+
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">The Gate of Heracles</h2>
+<p class="text-base">
+    The gate stands prominently at the onset of Curetes Street, boasting a two-storey structure. 
+    The lower storey features a spacious arched passageway, while the upper storey showcases
+     a row of six columns. Originally, at the corners where the arch connects with the 
+     pillars adorned with Corinthian capitals, reliefs of flying Nikes were situated.
+      These reliefs, along with most of the construction fragments, are yet to be discovered.
+       Notably, the two centrally positioned columns on the upper level bear a striking
+        resemblance to lintels. Mounted on these columns are reliefs portraying Heracles 
+        draped in a Nemea lion skin. These reliefs, akin to caryatids supporting 
+        Corinthian capitals, exhibit exquisite 2nd-century craftsmanship and were relocated to 
+        this site in the 5th century from another location.
+
+</p><br>
+<Image src={ephesus5} alt="Ephesus Nike Wing" class="rounded-md mb-4"/> 
+<h2 class="text-2xl font-extrabold dark:text-white">Curetes Street</h2>
+<p class="text-base">
+    In ancient mythology, the Curetes were revered as semi-deities. Over time, 
+    the term "Curetes" evolved to denote a class of priests in Ephesus. Inscriptions dedicated 
+    to the Curetes have been unearthed at various sites in Ephesus, particularly at the Prytaneion. 
+    Initially, there were six Curetes, but their number later expanded to nine. 
+    Their primary role was to reenact the birth of Artemis Ephesia in Ortygia, near Ephesus. 
+    According to legend, while Leto, impregnated by Zeus, was delivering the twins Artemis
+     and Apollo, the Curetes created a clamor with their weapons to distract Zeus's wife Hera,
+      who was envious of Leto and sought to obstruct the birth of the twins.
+<br><br>
+    Originally associated solely with the Artemision, the Curetes later gained prominence in
+     the Prytaneion during the Roman Empire. Each year, new Curetes were selected to fulfill
+      their sacred duties. The street named after the Curetes extends from the Heracles Gate
+       to the Celcus Library, boasting a central location in the city. Along this thoroughfare,
+        monumental structures face the street, serving as enduring testaments to Ephesus's
+         rich cultural and religious heritage.
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Trajan Fountain</h2>
+<p class="text-base">
+    Along Curetes Street, amidst a captivating array of ancient ruins and sculpted pillars 
+    adorned with intricate figurines, stands a scaled-down reconstruction of one of Ephesus's 
+    most notable monuments. Originally towering to a height of 12 meters, this fountain,
+     erected between 102 and 104 A.D., was dedicated to Emperor Trajan, as inscribed on its pedestal.
+      At its apex, a tympanum is upheld by Corinthian columns, while the central niche once housed
+       a colossal statue of Trajan, now represented only by the base, feet, and globe.
+        The fountain's once-abundant sculptural embellishments, depicting members of
+         the Imperial Family, Dionysus, Aphrodite, and Satyrs, among others,
+          have since been relocated to the museum for preservation and study.
+
+</p><br>
+<Image src={ephesus6} alt="Ephesusg" class="rounded-md mb-4"/> 
+<h2 class="text-2xl font-extrabold dark:text-white">Temple of Hadrian</h2>
+<p class="text-base">
+    Standing as one of the most captivating structures along Curetes Street, 
+    this temple likely reached completion no later than 138 A.D. Comprised of a grand pronaos,
+     or front porch, and a modest, unadorned cella, or main chamber, its facade boasts 
+     four Corinthian columns supporting a triangular pediment. Adorning the center of 
+     the pediment, above the two central columns, is an arch gracefully descending, crowned by
+      the bust of Tyche, the city's guardian goddess.
+    <br><br>
+    The lintel above the entrance is intricately adorned with classical motifs such as 
+    eggs and strands of pearls. On the second semi-circular panel above the door, amidst a 
+    backdrop of flowers and acanthus leaves, a maiden resembling Medusa is depicted.
+    <br><br> 
+    Flanking the columns are four bases bearing inscriptions, each adorned with statues
+     representing the four emperors who co-ruled the Roman Empire between 293 and 305: Diocletian,
+      Maximian, Constantius Chlorus, and Galerius, as specified by the inscriptions on their
+       respective bases.
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Ephesus Public Latrines </h2>
+<p class="text-base">
+    In ancient Ephesus, a public latrine dating back to the 1st century CE was discovered northeast 
+    of the Marble and Curetes streets junction. This latrine, part of the larger Scholastica Baths,
+     featured marble bench toilet seats with holes and a central pool for rainwater collection. 
+     Protected by a wooden roof, it offered comfort even in winter, thanks to an underground
+      heating system from the nearby baths.
+    <br><br> 
+    While private bathrooms were a luxury, most Ephesians relied on public latrines.
+     Despite the initial shock for modern visitors, these latrines were social hubs where people
+      gathered to chat and exchange news. To clean themselves,
+      clients used sponges on sticks dipped in vinegar, while public slaves maintained warmth
+       on the seats.
+    <br><br> 
+    Archaeological studies of Ephesus' latrines revealed insights into hygiene and parasite 
+    infections in the Roman era. Analysis of faecal material showed the presence of 
+    roundworm and whipworm, indicating poor sanitation practices. Despite Ephesus'
+     importance as a trading hub, parasite diversity was surprisingly low, suggesting 
+     inadequate hand hygiene among its inhabitants.
+
+</p><br>
+<Image src={ephesus7} alt="Ephesusg" class="rounded-md mb-4"/> 
+
+<h2 class="text-2xl font-extrabold dark:text-white">Marble Street</h2>
+<p class="text-base">
+    The street leading to the theatre from the Library of Celsus, situated along 
+    the western slopes of Mount Panayir, holds significant architectural value. Dating back
+     to the 1st century A.D., it was reconstructed in the 5th century under Eutropius, who
+      paved it with uneven marble blocks, giving rise to its name. This street primarily
+       served carriage traffic, evidenced by the deep wheel grooves still visible in parts 
+       restored during the High Medieval period.
+       <br><br> 
+    Along its sides, remnants of a Roman columned portico and a podium supporting a
+     covered stoa are visible. Built during Nero's reign, these structures were primarily used 
+     for pedestrian traffic.
+
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Harbour Street</h2>
+<p class="text-base">
+
+    Harbour Street, spanning 500 meters in length and 11 meters in width, was flanked by covered
+     porticos on both sides. These porticos, designated for pedestrians, provided shelter from
+      inclement weather and housed shops within. The roadway, entirely paved with marble,
+       featured four columns adorned with Corinthian capitals in the middle section, each
+        supporting statues of the Four Evangelists.
+        <br><br> 
+    The surviving shafts of these columns exhibit ornate patterns with distinct Christian influences.
+     It is speculated that these decorative additions were made under Justinian in the 6th century,
+      shortly before the city's inevitable decline.
+
+</p><br>
+
+<Image src={ephesus8} alt="Ephesusg" class="rounded-md mb-4"/> 
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>

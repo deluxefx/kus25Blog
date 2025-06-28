@@ -1,0 +1,98 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import ephesus from 'src/assets/images/ephesus-houses.jpg';
+import ephesus2 from 'src/assets/images/ephesus-houses2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Ephesus Terrace Houses',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Ephesus Terrace Houses"
+    subtitle="The Terrace Houses in Ephesus are upscale residences located adjacent to Curetes Street, across from the Temple of Hadrian."
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    The Terrace Houses in Ephesus are opulent residential dwellings situated adjacent to
+     Curetes Street, across from the Temple of Hadrian. Dating back to around 200 BC, 
+     these houses were built on three terraces using sturdy stone walls. While the northernmost 
+     terrace featured a lavish residence dating back to the 1st century BC,
+      the other terraces were dedicated to artisanal activities. During the construction of 
+      the Roman Dwelling Units, the earlier Hellenistic structures were dismantled and flattened.
+
+
+</p> 
+<br>
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+<p class="text-base">
+
+    Facing Curetes Street from the Temple of Hadrian, the "Houses on the slope" 
+    complex presents an intriguing sight. Inhabited by the elite and affluent class, 
+    these residences are also known as "houses of the rich" or "palaces on the slopes." 
+    Each house had an entrance opening onto the side street from a terrace, leading to a 
+    peristyle courtyard surrounded by rooms. Most of these houses were three stories high,
+     with courtyards ranging from 25 to 50 meters in size. Adorned with a colonnade and 
+     marble flooring, the courtyards boasted running water, reflecting the luxurious lifestyle
+      of their inhabitants.
+</p> 
+<br>
+
+<p class="text-base">
+    The Terrace Houses are adorned with wall paintings and graffiti that provide a glimpse 
+    into the daily lives of their occupants. The artwork includes depictions of gladiators, 
+    caricatures, animals, and graffiti containing personal names, poems, and declarations of love. 
+    Of particular interest are lists detailing various goods and their prices, offering insight
+     into the cost of living at the time.
+<br><br>
+    To provide warmth, the houses utilized a heating system akin to those found in spas,
+     with provisions for hot and cold water. Despite the absence of windows, natural light
+      filtered through open halls. The interior rooms featured frescoed walls, often depicting
+       mythological scenes, while the floors were embellished with intricate mosaics, showcasing 
+       the refinement and artistic tastes of the residents.
+    </p> 
+    <br>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
+
+</Layout>
