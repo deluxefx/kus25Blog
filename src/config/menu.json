@@ -5,6 +5,10 @@
       "url": "/"
     },
     {
+      "name": "Ephesus",
+      "url": "/ephesus/"
+    },
+    {
       "name": "About",
       "url": "/about"
     },
