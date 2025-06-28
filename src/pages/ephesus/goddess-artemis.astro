@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
+
 import Breadcrumb from '~/components/widgets/breadcrumb.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { ViewTransitions } from 'astro:transitions';
@@ -24,15 +24,7 @@ const metadata = {
   <ViewTransitions />
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline=""
-    title="Goddess Artemis"
-    subtitle="Artemis of Ephesus: Unraveling the Mysteries of an Ancient Goddess"
-    image={{
-      src: ephesus,
-      alt: 'Ephesus',
-    }}
-  />
+ 
 
   <!-- Features2 Widget ************** -->
   <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">

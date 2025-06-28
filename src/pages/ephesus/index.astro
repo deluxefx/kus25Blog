@@ -3,7 +3,8 @@ import Base from '@layouts/Base.astro';
 import Page from '@layouts/Page.astro';
 import Breadcrumb from '@components/widgets/breadcrumb.astro';
 import Hero from '@components/widgets/Hero.astro'
-import ephesus from 'src/assets/images/ephesus.jpg';
+import ephesus from '@components/assets/images/ephesus.jpg';
+import KusadasiInfo from '@components/widgets/EphesusInfoFeatures.astro';
 
 const metadata = {
   title: 'Ephesus Info',
@@ -85,6 +86,7 @@ must-visit destination for history enthusiasts and cultural aficionados alike.
 
 
     </section>
+        <KusadasiInfo />
 <Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
 

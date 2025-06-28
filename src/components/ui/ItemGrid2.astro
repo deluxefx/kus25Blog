@@ -1,9 +1,9 @@
 ---
-import { Icon } from "astro-icon/components";
+
 import { twMerge } from "tailwind-merge";
-import type { ItemGrid } from "~/types";
+import type { ItemGrid } from "@components/types";
 import Button from "./Button.astro";
-import Image from '~/components/common/Image.astro';
+import Image from '@components/common/Image.astro';
 
 const {
   items = [],
@@ -57,16 +57,7 @@ const {
               itemClasses?.panel
             )}
           >
-            {(icon || defaultIcon) && (
-              <Icon
-                name={icon || defaultIcon}
-                class={twMerge(
-                  "mb-2 w-10 h-10",
-                  defaultIconClass,
-                  itemClasses?.icon
-                )}
-              />
-            )}
+          
             <div
               class={twMerge(
                 "text-xl font-bold",
