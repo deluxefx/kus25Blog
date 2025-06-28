@@ -12,7 +12,6 @@ import { manifest } from './src/utils/manifest';
 export default defineConfig({
   site: 'http://localhost:4322/',
   markdown: {
-    drafts: true,
     shikiConfig: {
       theme: 'material-theme-palenight',
       wrap: true,
@@ -25,7 +24,6 @@ export default defineConfig({
         theme: 'material-theme-palenight',
         wrap: true,
       },
-      drafts: true,
     }),
     compressor({ gzip: true, brotli: true }),
     sitemap(),
