@@ -1,0 +1,12 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class={`flex items-center ${className || ''}`}>
+  <img src="/favicon.svg" alt="Logo" class="w-8 h-8 mr-2" />
+  <span class="text-xl font-bold">Kusadasi Blog</span>
+</div>
