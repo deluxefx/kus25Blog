@@ -41,15 +41,15 @@
     "lint:eslint": "eslint . --ext .js,.ts,.astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "@astrojs/tailwind": "^6.0.2",
+    "@astrojs/mdx": "4.3.0",
+    "@astrojs/rss": "4.0.12",
+    "@astrojs/sitemap": "3.4.1",
+    "@astrojs/tailwind": "6.0.2",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/typography": "0.5.12",
     "@typescript-eslint/eslint-plugin": "7.5.0",
     "@typescript-eslint/parser": "7.5.0",
-    "astro": "^5.10.1",
+    "astro": "5.10.1",
     "astro-md-generator": "1.0.0",
     "astro-robots-txt": "1.0.0",
     "dotenv": "16.4.5",
@@ -68,9 +68,9 @@
     "astro-compress/sharp": "0.33.1"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.6.0",
+    "@astrojs/cloudflare": "12.6.0",
     "astro-compressor": "0.4.1",
-    "astro-icon": "^1.1.5",
-    "tailwind-merge": "^3.3.1"
+    "astro-icon": "1.1.5",
+    "tailwind-merge": "3.3.1"
   }
 }
