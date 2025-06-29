@@ -12,17 +12,14 @@
       "name": "Ephesus",
       "url": "/ephesus/"
     },
-    {
-      "name": "About",
-      "url": "/about"
+      {
+      "name": "Around",
+      "url": "/misc/"
     },
     {
-      "name": "Tags",
-      "url": "/tags"
-    },
-    {
-      "name": "Categories",
-      "url": "/categories"
+      "name": "Contact",
+      "url": "/contact/"
     }
+
   ]
 }

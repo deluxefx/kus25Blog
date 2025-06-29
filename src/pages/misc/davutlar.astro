@@ -1,36 +1,35 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import guzelcamli from 'src/assets/images/guzelcamli.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/AroundInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import photo from '@components/assets/images/guzelcamli.jpg';
+
 
 
 const metadata = {
   title: 'Davutlar and Guzelcamli',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="Davutlar and Guzelcamli"
-    subtitle="Davutlar and Guzelcamli: Coastal Gems near Kusadasi"
+    title={metadata.title}
+    subtitle="Davutlar and Guzelcamli: Coastal Gems near Kusadasi."
     image={{
-      src: guzelcamli,
-      alt: 'Davutlar Guzelcamli',
+      src: photo,
+      alt: 'Davutlar and Guzelcamli',
     }}
   />
+
+
+ 
 
   <!-- Features2 Widget ************** -->
   <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
@@ -89,6 +88,7 @@ const metadata = {
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+<Breadcrumb firstText="Around" firstLink="/misc/" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

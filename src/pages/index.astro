@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import HomePagination from '@components/HomePagination.astro';
 import Base from '@layouts/Base.astro';
 import Hero from '@components/widgets/Hero.astro'
+import kusadasi from '@components/assets/images/kusadasi.jpg';
 import Posts from '@layouts/Posts.astro';
 
 const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -13,7 +14,31 @@ const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueO
     tagline=""
     title="Welcome to Kusadasi.biz"
     subtitle="The comprehensive online resource for everything Kusadasi, from local insights to travel planning."
+     image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
 />
-  <Posts posts={posts} />
-  <HomePagination />
+<section>
+<p>Kusadasi, renowned as both a beach resort town and a significant stop for cruise ships, 
+  sits just 18km from the renowned ancient city of Ephesus. Its strategic location near historical sites 
+  like Ephesus, the Temple of Artemis, and the House of Virgin Mary makes it an ideal hub for Aegean cruises. 
+  Enjoying a Mediterranean climate with long summers and mild winters,
+   Kusadasi basks in sunshine for approximately 300 days annually,
+    making it a sought-after destination for tourists year-round.
+</p>
+
+
+<p>
+Originally a humble fishing village,
+ Kusadasi has blossomed into one of Turkey's premier resorts, offering visitors 
+ a plethora of activities. From lazing on beautiful beaches and indulging in
+  Turkish cuisine to exploring vibrant markets and enjoying waterparks,
+   there's something for everyone. As the sun sets, the town's charming
+    cafes and restaurants come alive, offering a delightful ambiance for
+     pre-dinner drinks and leisurely meals. With a lively nightlife featuring an array of cafes, bars,
+      and clubs, Kusadasi ensures unforgettable evenings for all who visit.
+</p>
+
+</section>
 </Base>

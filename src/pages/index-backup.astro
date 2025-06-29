@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import HomePagination from '@components/HomePagination.astro';
+import Base from '@layouts/Base.astro';
+import Hero from '@components/widgets/Hero.astro'
+import Posts from '@layouts/Posts.astro';
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Base>
+    <Hero
+    tagline=""
+    title="Welcome to Kusadasi.biz"
+    subtitle="The comprehensive online resource for everything Kusadasi, from local insights to travel planning."
+/>
+  <Posts posts={posts} />
+  <HomePagination />
+</Base>

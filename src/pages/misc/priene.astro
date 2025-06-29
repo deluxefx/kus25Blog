@@ -1,15 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import photo from 'src/assets/images/priene.jpg';
-import photo2 from 'src/assets/images/miletus.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/AroundInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import photo from '@components/assets/images/priene.jpg';
+import photo2 from '@components/assets/images/miletus.jpg';
 
 
 
@@ -17,23 +14,23 @@ const metadata = {
   title: 'Priene, Miletus and Didyma',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="Priene, Miletus and Didyma"
-    subtitle="Exploring Priene, Miletus, and Didyma: Ancient Treasures of Turkey"
+    title={metadata.title}
+    subtitle="Exploring Priene, Miletus, and Didyma: Ancient Treasures of Turkey."
     image={{
       src: photo,
-      alt: 'Priene',
+      alt: 'Priene, Miletus and Didyma',
     }}
   />
+
+
+ 
 
   <!-- Features2 Widget ************** -->
   <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
@@ -99,8 +96,7 @@ const metadata = {
 
 
 
-
-    </section>
+   </section>
 
 
     <KusadasiInfo />
@@ -108,6 +104,8 @@ const metadata = {
   <!-- Breadcrumb -->
 
 
-  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+<Breadcrumb firstText="Around" firstLink="/misc/" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>
+
