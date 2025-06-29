@@ -1,0 +1,53 @@
+---
+
+
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'Connect with me',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Contact Me"
+    subtitle="Let's connect!"
+
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+    Hello, I'm Umit, but I'm no longer actively maintaining this website. 
+    I want to caution you that much of the content here may be outdated.
+     I created this site years ago, and since then, Kusadasi has changed significantly, 
+     and not for the better. While browsing through the pages, you'll see the 
+     immense potential this resort town once had, but regrettably,
+      it's now facing various challenges. However, if you need to reach me, 
+      you can contact me via my Instagram account:
+      <br><br>
+      <a href="https://www.instagram.com/iamtravelr"><b>https://www.instagram.com/iamtravelr</b></a>
+      </section>
+      <br>    <br>    <br>    <br>    <br>    <br>
+
+
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Contact Me" firstLink="/misc/contact" title={metadata.title} />
+
+</Layout>

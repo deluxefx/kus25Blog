@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/cesme.jpg';
+import photo2 from 'src/assets/images/alacati.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+
+const metadata = {
+  title: 'Cesme and Alacati',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Cesme and Alacati"
+    subtitle="Exploring Çesme and Alacati: Coastal Charms of Turkey"
+    image={{
+      src: photo,
+      alt: 'Cesme',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled along the stunning Aegean coast of Turkey lies Çeşme and Alaçatı, two enchanting
+     destinations that beckon travelers with their pristine beaches, charming villages,
+      and rich cultural heritage. As you venture through these coastal gems, you'll discover 
+      a world of sun-soaked relaxation, vibrant markets, and delectable cuisine, making 
+      them must-visit destinations for any traveler seeking an unforgettable Turkish experience.
+</p> <br>
+<Image src={photo2} alt="Priene" class="rounded-md mb-4"/>
+<h2 class="text-2xl font-extrabold dark:text-white">Çeşme: A Seaside Sanctuary</h2>
+<p class="text-base">
+    With its azure waters and golden sands, Çeşme offers travelers a perfect blend of natural
+     beauty and laid-back charm. Spend your days lounging on the sun-drenched beaches,
+      where you can soak up the Mediterranean sun or indulge in thrilling water sports 
+      like windsurfing and kiteboarding. For a taste of history, explore the Çeşme Castle,
+       a stunning Ottoman fortress that offers panoramic views of the coastline and the
+        sparkling Aegean Sea. And no visit to Çeşme would be complete without sampling 
+        its world-renowned thermal baths, where you can rejuvenate your body and soul in
+         the healing waters.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Alaçatı: A Quaint Village Retreat</h2>
+<p class="text-base">
+    Just a short drive from Çeşme lies the picturesque village of Alaçatı, 
+    renowned for its charming cobblestone streets, historic stone houses, 
+    and vibrant atmosphere. Wander through the village's bustling market, where you can
+     browse handmade crafts, boutique shops, and local delicacies. Alaçatı is 
+     also a food lover's paradise, with its array of cozy cafes, trendy restaurants,
+      and traditional tavernas serving up mouthwatering Aegean cuisine. 
+      And for those seeking adventure, Alaçatı offers plenty of opportunities 
+      for outdoor activities, from windsurfing and sailing to exploring the surrounding 
+      vineyards and olive groves.
+
+
+</p> <br>
+
+
+
+
+<p class="text-base">
+    From the sun-drenched beaches of Çeşme to the cobblestone streets of Alaçatı,
+    these coastal destinations offer travelers a perfect blend of relaxation, culture, 
+    and adventure. Whether you're basking in the Mediterranean sun, exploring historic 
+    landmarks, or savoring local delicacies, Çeşme and Alaçatı invite you to immerse
+     yourself in the beauty and charm of Turkey's Aegean coast.
+
+
+</p> <br>
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

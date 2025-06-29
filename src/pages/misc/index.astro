@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/izmir4.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+
+
+const metadata = {
+  title: 'Around Kusadasi',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Around Kusadasi"
+    subtitle="Exploring Kusadasi and Beyond: Adventures Along Turkey's Aegean Coast"
+    image={{
+      src: photo,
+      alt: 'Cesme',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled along Turkey's picturesque Aegean coastline, Kusadasi offers not only its
+     own captivating attractions but also serves as an ideal gateway to explore the 
+     surrounding gems of the region. From the ancient ruins of Ephesus, where history 
+     whispers through every stone, to the charming seaside town of Cesme with its
+      azure waters and vibrant markets, there's a plethora of experiences awaiting travelers.
+       Venture further inland to discover the quaint village of Sirince, known for its 
+       traditional architecture and locally-produced wines, or soak in the healing
+        mineral waters of Pamukkale's terraced pools. Whether indulging in the lively 
+        atmosphere of Alacati's cobblestone streets or embarking on a cultural journey 
+        through the ancient cities of Priene, Miletus, and Didyma, Kusadasi and its 
+        surroundings promise an unforgettable adventure blending history, nature,
+         and authentic Turkish hospitality.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Feel free to use the links below to discover the areas surrounding Kusadasi.</h2>
+
+
+
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

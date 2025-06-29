@@ -1,0 +1,75 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-pano-1.jpg';
+import kusadasi2 from 'src/assets/images/kusadasi-beach-1.jpg';
+import kusadasi3 from 'src/assets/images/kusadasi-food.jpg';
+import kusadasi4 from 'src/assets/images/kusadasi-pano-3.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: '10 Reasons to Visit Kusadasi'
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="10 Reasons to Visit Kusadasi"
+    subtitle="Here are 10 compelling reasons to visit. Kusadasi is perfect for singles, couples, families, and retirees alike, catering to diverse preferences and interests.."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+   <b> 1. Stunning Beaches: </b>Kusadasi boasts beautiful sandy beaches with crystal-clear waters, perfect for swimming and sunbathing.
+</p><br>
+<Image src={kusadasi2} alt="Kusadasi." class="rounded-md mb-4"/>
+<p class="text-base">  <b>  2. Rich History:</b> Explore ancient ruins like Ephesus, one of the best-preserved ancient cities in the world, and witness the region's rich historical heritage.</p><br>
+<p class="text-base">  <b>  3.  Vibrant Nightlife:</b> Enjoy lively nightlife with a variety of bars, clubs, and restaurants offering entertainment until the early hours.</p><br>
+<p class="text-base">   <b> 4. Delicious Cuisine:</b> Indulge in delicious Turkish cuisine, including fresh seafood, traditional mezes, and kebabs, served in charming local eateries.</p><br>
+<Image src={kusadasi3} alt="Turkish cuisine" class="rounded-md mb-4"/>
+<p class="text-base">   <b> 5. Shopping Paradise:</b> Shopaholics will love exploring the bustling bazaars and markets, offering everything from handcrafted souvenirs to designer goods.</p><br>
+<p class="text-base">   <b> 6.  Water Sports:</b> Dive into thrilling water sports activities such as jet skiing, parasailing, and scuba diving, perfect for adrenaline junkies.</p><br>
+<p class="text-base">   <b> 7. Natural Beauty: </b>Discover the breathtaking landscapes of the region, including lush green hills, serene lakes, and picturesque coastal cliffs.</p><br>
+<p class="text-base">   <b> 8. Family-Friendly Attractions:</b> Kusadasi offers plenty of family-friendly attractions, including water parks, amusement parks, and dolphin shows, ensuring fun for all ages.</p><br>
+<p class="text-base">   <b> 9. Turkish Hospitality:</b> Experience the warm hospitality of the Turkish people, known for their friendliness and welcoming nature towards visitors.</p><br>
+<Image src={kusadasi4} alt="Turkish cuisine" class="rounded-md mb-4"/>
+<p class="text-base">   <b> 10. Cruise Port:</b> As a major cruise ship destination, Kusadasi welcomes thousands of visitors each year, offering easy access to nearby attractions and excursions.</p><br>
+
+    
+<br>
+
+<br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

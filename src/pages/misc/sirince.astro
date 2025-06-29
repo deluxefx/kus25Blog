@@ -1,0 +1,95 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/sirince.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Sirince',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Sirince Village"
+    subtitle="Sirince: A Tranquil Retreat in Turkey's Aegean Region"
+    image={{
+      src: photo,
+      alt: 'Sirince, Izmir',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled in the verdant hills of the Aegean region, Sirince village stands 
+    as a charming retreat near the bustling cities of Izmir and Kusadasi in Turkey.
+     This picturesque village, with its cobblestone streets and traditional Ottoman houses,
+      exudes an old-world charm that transports visitors back in time. Surrounded by
+       vineyards and orchards, Sirince offers a serene atmosphere where travelers can 
+       unwind and immerse themselves in the beauty of nature.
+</p> <br>
+<p class="text-base">  
+    Sirince is renowned for its local wines and olive oils, which are produced using traditional 
+    methods passed down through generations. Visitors can explore the village's 
+    boutique wineries and olive oil presses, where they can sample the region's finest offerings
+     and learn about the rich agricultural heritage of the area. Additionally,
+     Sirince boasts a vibrant market scene, where artisans sell handcrafted goods such as pottery,
+     textiles, and jewelry, making it the perfect destination for those seeking unique souvenirs
+      to take home.
+</p> <br>  
+
+<div class="aspect-w-16 aspect-h-9">
+    <iframe width="100%" height="480"  src="https://www.youtube.com/embed/BYZwnb1jRhg?si=FA6W2iV6v2dW9e0X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+
+<p class="text-base">
+    Beyond its culinary delights and artisanal offerings, Sirince is also steeped in history 
+    and culture. The village is home to several well-preserved Byzantine-era churches, including
+     the Church of St. John the Baptist, which dates back to the 6th century. Travelers 
+     can explore these ancient landmarks and gain insight into the region's fascinating 
+     past while marveling at the intricate frescoes and architectural details that adorn 
+     these historic sites. With its blend of natural beauty, culinary delights, and cultural heritage,
+      Sirince village offers a truly immersive experience for visitors seeking to 
+      discover the authentic charm of Turkey's Aegean region.
+</p> <br>
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

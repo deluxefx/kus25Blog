@@ -1,0 +1,159 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-aydin.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'Weather'
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Weather"
+    subtitle="Kusadasi enjoys pleasant weather throughout much of the year, making it an attractive destination for visitors seeking sunshine and warmth."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+    <p class="text-base">
+      The weather in Kusadasi is typically Mediterranean, characterized by hot and dry summers and mild winters. In the summer months, from June to September, temperatures can soar, often reaching highs of around 30 to 35 degrees Celsius (86 to 95 degrees Fahrenheit). During these months, Kusadasi experiences plenty of sunshine, with minimal rainfall.
+<br> <br>
+      In the winter, from December to February, temperatures are much milder, ranging from 10 to 15 degrees Celsius (50 to 59 degrees Fahrenheit). While winters are generally wetter than summers, rainfall is still relatively low compared to other regions.
+  </p>
+  <br> <br>
+
+
+<h2 class="text-2xl font-extrabold dark:text-white">Weather Stats</h2>
+<table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400  ">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 p-2">
+      <tr>
+        <th>Months</th>
+        <th>Av. High</th>
+        <th>Av. Low</th>
+        <th>Record High</th>
+        <th>Record Low</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Jan</strong></div></td>
+<td><div>13.4 °C</div></td>
+<td><div>4.2 °C</div></td>
+<td><div>21.8 °C</div></td>
+<td><div>-4.8 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Feb</strong></div></td>
+<td><div>13.5 °C</div></td>
+<td><div>4.4 °C</div></td>
+<td><div>25.2 °C</div></td>
+<td><div>-5.2 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Mar</strong></div></td>
+<td><div>18.0 °C</div></td>
+<td><div>6.4 °C</div></td>
+<td><div>32.4 °C</div></td>
+<td><div>-5.0 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Apr</strong></div></td>
+<td><div>22.4 °C</div></td>
+<td><div>9.9 °C</div></td>
+<td><div>33.4 °C</div></td>
+<td><div>-0.8 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>May</strong></div></td>
+<td><div>28.2 °C</div></td>
+<td><div>14.0 °C</div></td>
+<td><div>39.3 °C</div></td>
+<td><div>+4.6 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Jun</strong></div></td>
+<td><div>33.5 °C</div></td>
+<td><div>17.9 °C</div></td>
+<td><div>44.4 °C</div></td>
+<td><div>+8.4 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Jul</strong></div></td>
+<td><div>36.1 °C</div></td>
+<td><div>20.2 °C</div></td>
+<td><div>44.6 °C</div></td>
+<td><div>+13.6 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Aug</strong></div></td>
+<td><div>35.3 °C</div></td>
+<td><div>19.8 °C</div></td>
+<td><div>43.8 °C</div></td>
+<td><div>+13.7 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Sep</strong></div></td>
+<td><div>32.0 °C</div></td>
+<td><div>16.3 °C</div></td>
+<td><div>39.4 °C</div></td>
+<td><div>+9.0 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Oct</strong></div></td>
+<td><div>26.6 °C</div></td>
+<td><div>12.5 °C</div></td>
+<td><div>37.8 °C</div></td>
+<td><div>+2.0 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Nov</strong></div></td>
+<td><div>19.5 °C</div></td>
+<td><div>8.2 °C</div></td>
+<td><div>30.7 °C</div></td>
+<td><div>-2.0 °C</div></td>
+</tr>
+<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+<td><div><strong>Dec</strong></div></td>
+<td><div>14.5 °C</div></td>
+<td><div>5.5 °C</div></td>
+<td><div>25.4 °C</div></td>
+<td><div>-3.8 °C</div></td>
+</tr>        </tbody>
+  </table>
+
+<br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

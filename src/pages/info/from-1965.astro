@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-1965-A.jpg';
+import kusadasi1 from 'src/assets/images/kusadasi-1965-1.jpg';
+import kusadasi2 from 'src/assets/images/kusadasi-1965-2.jpg';
+import kusadasi3 from 'src/assets/images/kusadasi-1965-3.jpg';
+import kusadasi4 from 'src/assets/images/kusadasi-1965-4.jpg';
+import kusadasi5 from 'src/assets/images/kusadasi-1965-5.jpg';
+import kusadasi6 from 'src/assets/images/kusadasi-1965-6.jpg';
+import kusadasi7 from 'src/assets/images/kusadasi-1965-7.jpg';
+import kusadasi8 from 'src/assets/images/kusadasi-1965-8.jpg';
+import kusadasi9 from 'src/assets/images/kusadasi-1965-9.jpg';
+import kusadasi10 from 'src/assets/images/kusadasi-1965-10.jpg';
+import kusadasi11 from 'src/assets/images/kusadasi-1965-11.jpg';
+import kusadasi12 from 'src/assets/images/kusadasi-1965-12.jpg';
+import kusadasi13 from 'src/assets/images/kusadasi-1965-13.jpg';
+import kusadasi14 from 'src/assets/images/kusadasi-1965-14.jpg';
+import kusadasi15 from 'src/assets/images/kusadasi-1965-15.jpg';
+import kusadasi16 from 'src/assets/images/kusadasi-1965-16.jpg';
+import kusadasi17 from 'src/assets/images/kusadasi-1965-17.jpg';
+import kusadasi18 from 'src/assets/images/kusadasi-1965-18.jpg';
+import kusadasi19 from 'src/assets/images/kusadasi-1965-19.jpg';
+import kusadasi20 from 'src/assets/images/kusadasi-1965-20.jpg';
+import kusadasi21 from 'src/assets/images/kusadasi-1965-21.jpg';
+import kusadasi22 from 'src/assets/images/kusadasi-1965-22.jpg';
+import kusadasi23 from 'src/assets/images/kusadasi-1965-23.jpg';
+import kusadasi24 from 'src/assets/images/kusadasi-1965-24.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'Kusadasi Photos from 1965',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="A Glimpse into 1965"
+    subtitle="Kusadasi photos from 1965, courtesy of Charles W. Cushman."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+    The vintage photos from 1965, courtesy of Charles W. Cushman, 
+    offer a captivating glimpse into the past, showcasing
+     Kusadasi in a remarkably different compared to its present-day appearance.
+       From bustling streets to serene landscapes, 
+       these photographs provide a nostalgic journey back in time, 
+       allowing us to appreciate the rich history and heritage of Kusadasi.
+</p>  
+<Image src={kusadasi1} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi2} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi3} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi4} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi5} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi6} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi7} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi8} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi9} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi10} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi11} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi12} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi13} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi14} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi15} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi16} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi17} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi18} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi19} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi20} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi21} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi22} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi23} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+<Image src={kusadasi24} alt="Kusadasi 1965" class="rounded-md mb-4"/>
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

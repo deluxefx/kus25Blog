@@ -1,0 +1,113 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/priene.jpg';
+import photo2 from 'src/assets/images/miletus.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'Priene, Miletus and Didyma',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Priene, Miletus and Didyma"
+    subtitle="Exploring Priene, Miletus, and Didyma: Ancient Treasures of Turkey"
+    image={{
+      src: photo,
+      alt: 'Priene',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+  
+    Nestled in the heart of Turkey's Aegean region lies a trio of ancient cities:
+     Priene, Miletus, and Didyma. These archaeological sites offer a fascinating 
+     glimpse into the rich history and culture of the region, enticing travelers
+      with their well-preserved ruins and captivating stories from antiquity.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Priene</h2>
+<p class="text-base">
+    As you wander through the ancient streets of Priene, you'll be transported back in 
+    time to the Hellenistic period. This meticulously planned city, perched on the slopes 
+    of Mount Mycale, boasts impressive architectural feats, including its iconic Temple of Athena, 
+    which commands breathtaking views of the surrounding landscape. Explore the
+     remains of grand boulevards, intricate mosaics, and the imposing theater, 
+     where performances once entertained the city's inhabitants.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Miletus</h2>
+<p class="text-base">
+    Just a short journey from Priene lies the ancient city of Miletus, once a bustling p
+    ort and center of trade in the ancient world. Here, visitors can marvel at the expansive
+     ruins of the city's agora, baths, and stadium, offering insight into the daily 
+     life of its inhabitants. Don't miss the opportunity to explore the renowned Miletus Theater,
+      renowned for its exceptional acoustics and grandeur.
+</p> <br>
+<Image src={photo2} alt="Priene" class="rounded-md mb-4"/>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Didyma</h2>
+<p class="text-base">
+    Conclude your journey with a visit to Didyma, home to the magnificent Temple of Apollo, 
+    one of the largest and most impressive temples of antiquity. Though unfinished, 
+    this colossal structure remains a testament to the ancient world's architectural prowess. 
+    Step inside the temple's sacred precinct, where pilgrims once sought guidance from 
+    the famed Oracle of Didyma, and immerse yourself in the mystical atmosphere of this sacred site.
+
+
+</p> <br>
+
+<p class="text-base">
+    From the sacred rituals of Didyma to the bustling streets of Miletus and the grandeur of Priene,
+     exploring these ancient cities promises an unforgettable journey through Turkey's 
+     storied past. Whether you're a history enthusiast, an architecture aficionado, 
+     or simply a curious traveler, Priene, Miletus, and Didyma offer a wealth of 
+     treasures waiting to be discovered.
+
+
+</p> <br>
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

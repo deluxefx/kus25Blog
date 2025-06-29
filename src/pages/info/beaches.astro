@@ -1,0 +1,123 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-beaches.jpg';
+import kusadasi2 from 'src/assets/images/kusadasi-beach.jpg';
+import kusadasi3 from 'src/assets/images/beach-downtown.jpg';
+import kusadasi4 from 'src/assets/images/kusadasi-long-beach.jpg';
+import kusadasi5 from 'src/assets/images/kusadasi-gold.jpg';
+import kusadasi6 from 'src/assets/images/kusadasi-silver.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'Kusadasi Beaches'
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Kusadasi Beaches"
+    subtitle="There are numerous beaches in Kusadasi, All with one thing in common crystal clear waters and picture perfect weather."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    In Kusadasi, you'll find countless beaches, each boasting crystal-clear waters and perfect weather. Some of the busier beaches offer exciting water sports like banana boat rides, jet skiing, pedalos, and parasailing. Additionally, you can rent sunbeds and umbrellas for a relaxing day by the sea.
+</p><br>
+<h2 class="text-2xl font-extrabold dark:text-white">Downtown Beach</h2>
+<p class="text-base">
+
+    Located between the Harbor and the Marina, this spot is highly favored due to its convenient location near the town center and numerous hotels. Offering stunning views of Pigeon Island and the impressive cruise ships in the port, it's an ideal spot to soak up the sun and enjoy the surroundings. Amenities include sunbeds, beach umbrellas, and a cozy beachside cafe, while across the street, you'll find a variety of cafes and shops lining the boulevard.
+</p><br>
+<Image src={kusadasi3} alt="Kusadasi." class="rounded-md mb-4"/>
+<h2 class="text-2xl font-extrabold dark:text-white">Ladies Beach</h2>
+
+<Image src={kusadasi2} alt="Kusadasi." class="rounded-md mb-4"/>
+<p class="text-base">
+
+    Ladies Beach, known as Kadinlar Denizi in Turkish, stands out as one of Kusadasi's most popular and bustling beaches. Initially designated exclusively for female bathers, the beach is now open to all, offering a vibrant atmosphere with its palm-lined promenade adorned with shops, bars, cafes, and hotels, creating a resort-like ambiance. Renowned for its prime location near Kusadasi's center, the beach boasts clean, shallow waters, a kilometer-long stretch of sandy shoreline, and various amenities including water sports, changing rooms, umbrellas, sunbeds, and restrooms. Lifeguards are on duty from 08:00 to 19:00 for added safety.
+</p><br>  
+<p class="text-base"> Notably, the evening sunsets at Ladies Beach are a sight to behold. Relax with a glass of wine or an ice-cold Efes beer at one of the many cafes while enjoying the breathtaking sunset behind the Greek Island of Samos—an unforgettable memory for visitors to cherish.
+</p><br>   
+    <p class="text-base">  Whether you prefer leisurely days of swimming and sunbathing, exploring souvenir shops, unwinding at beachfront cafes, or engaging in thrilling water sports, Ladies Beach offers a diverse range of experiences.
+    </p><br>
+<p class="text-base"> For convenience, "Ladies Beach" minibuses (dolmus) operate regularly from Kusadasi's center, providing easy access to the beach. Alternatively, it's a 30-minute walk from central Kusadasi.
+</p><br>
+<h2 class="text-2xl font-extrabold dark:text-white">Long Beach</h2>
+<Image src={kusadasi4} alt="Kusadasi." class="rounded-md mb-4"/>   
+<p class="text-base">
+
+    Over time, Long Beach, named for its extensive 18-kilometer stretch, 
+    has undergone division into various sections due to the emergence of 
+    numerous cafeterias along the coastline, each lending its name to its 
+    respective part of the beach. Presently, only the initial segment of the entire beachfront
+     retains the name Long Beach, known for its abundance of activities.
+      Notably, Long Beach hosts Aqua Center, one of Kusadasi's three water parks.
+       Situated 6 kilometers south of Kusadasi, Kusadasi Long Beach is accessible via
+        "Sahil Siteleri" minibuses (dolmus) running every 15 minutes.
+</p><br>   
+<h2 class="text-2xl font-extrabold dark:text-white">Diamond Beach – Gold Beach</h2>
+<Image src={kusadasi5} alt="Kusadasi." class="rounded-md mb-4"/>   
+<p class="text-base">
+
+    Diamond Beach, commonly referred to as Gold Beach,
+     lies adjacent to the former holiday resorts Nazilli Sitesi and Aydin Tur Sitesi.
+      Referred to as "Siteler," meaning "sites," this area was initially 
+      characterized by the presence of numerous holiday homes. En route from
+       the main road to the beach, travelers will encounter Nazilli Bazaar, 
+       an exciting shopping destination. Continuing along, visitors will find
+        numerous small restaurants offering Turkish specialties like Gozleme and other snacks.
+         Additionally, the beach boasts several small cafeterias.
+</p><br>  
+<h2 class="text-2xl font-extrabold dark:text-white">Silver Sand Beach</h2>
+<Image src={kusadasi6} alt="Kusadasi." class="rounded-md mb-4"/>   
+<p class="text-base">
+
+    Silver Sand Beach, situated in the SSK area, is part of a longstanding holiday complex 
+    used by employees of the Social Security Institution (SSK) in Turkey,
+     positioned directly along the beachfront. A delightful cafeteria on the
+      beachfront serves snacks and beverages during the day and offers dinner in the evenings.
+       Accessing Silver Sand Beach from Kusadasi is convenient, with Davutlar
+        minibuses passing by the area. However, it's important to note that there are
+         two Davutlar bus lines, and passengers should specify the SSK stop or directly 
+         request Silver Beach.
+</p><br>  
+<br>
+
+<br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

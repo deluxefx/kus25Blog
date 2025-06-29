@@ -1,0 +1,121 @@
+---
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-history-big-2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'History of Kusadasi',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="History of Kusadasi"
+    subtitle="The initial settlements in Kusadasi were established by the Lelegians and Carians, who migrated from central Anatolia around 3000 BC."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+  The early settlements in Kusadasi were established by the Lelegians and Carians, 
+  who migrated from central Anatolia around 3000 BC. They founded a colony on the slopes
+   of Pilav Mountain in Kusadasi and established the cities of Ania and Melia. 
+   The mild climate of the region enabled the inhabitants to cultivate essential
+    crops such as olives, grapes, and figs on the fertile lands surrounding the city, 
+    which were used for extracting oil, making wine, and producing sweets.
+</p>
+    
+<br>
+<p>In the 10th century BC, the "12 Ionian Cities," including Samos, Khios, Miletos, Priene,
+   Ephesus, Teos, Erythrai, Priena, Klazonemi, Lebedos, Phokaia, Colophon, and Smyrna, 
+   were established and renowned as the most developed cities of that era. 
+   The annual meeting place of the Ionian League,
+    Panionian, was situated around Kusadasi, where the cities of Phygale,
+     Marathesion, and Neopolis were also founded. During this period, 
+     the ports of Phygale and Neopolis were not bustling or necessary, 
+     as they were in close proximity to the renowned trading centers and 
+     ports of Miletos and Ephesus.</p>
+<br>
+<p>In approximately 546 BC, the city was invaded by the Persians. 
+  By 200 BC, Kusadasi and its surroundings came under the rule of the Roman Empire,
+   and following the division of the Roman Empire, it became part of the Byzantine state.
+    Due to significant earthquakes and alterations in the course of the Caystros
+     River brought about by changes in climate, Ephesus suffered extensive destruction, 
+     leading to a decline in its significance and prosperity. Consequently, 
+     the Byzantines sought a new port and trade route, ultimately 
+     settling on the area around Neopolis. Recognized by Greek, Jewish,
+      and Armenian merchants, this new port, named "Scala Nova," became an alternative 
+      trading hub to Ephesus, complementing the historical cities of Ania, Melia, 
+      Phygale, and Neopolis, which laid the early foundations of present-day Kusadasi. 
+      By the 15th century, Scala Nova fell under the control of Venetian and Genoese 
+      sailors and traders, who established consulates in the area. Turkish dominance 
+      in the region began with the invasion of Seljukian Kilic Arslan the 2nd. 
+      Kusadasi's strategic location at the end of important trade routes, 
+      such as the Silk Road previously held by Ephesus, played a pivotal 
+      role in the city's positive development in trade.
+
+
+
+
+
+</p>
+<br>
+<p>Kusadasi began to be ruled by the Ottoman Empire after the invasion of 
+  Sultan Mehmet Celebi in the year of 1413. During the reign of Ottomans, 
+  Kusadasi was introduced to glorious structures, giving a new look to its former 
+  spectacular view. Okuz Mehmet Pasa Caravanserai is the principal of Ottoman 
+  architecture in the city, was built by the man of the same name, who was the 
+  vizier during the reigns of Sultan Ahmet1 and Osman2. The fortress gates, walls and 
+  many mosques in the center of Kusadasi, as well as the citadel of the castle in Pigeon Island, 
+  were built in the Ottoman period, reflecting the architectural style of the era. 
+  “Kusadasi” that means “bird island” took its name from the Pigeon Island.</p>
+<br>
+<p>
+  Following the First World War, the Greeks invaded Kusadasi in 1919. 
+  After a prolonged struggle, the fishing village successfully regained its 
+  independence in 1922, becoming a part of the Turkish Republic. Until 1954, 
+  Izmir served as the capital of Kusadasi. Subsequently, the capital was relocated to
+  Aydin, marking a period of significant development for Kusadasi,
+   particularly in the tourism sector.
+
+</p>
+<br>
+<p>
+
+Presently, Kusadasi stands as one of Turkey's premier holiday destinations, 
+renowned for its pristine sandy beaches and crystalline waters.
+ The juxtaposition of vibrant holiday activities with the serene ambiance 
+ of ancient ruins contributes to the city's unique atmosphere.
+</p>
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

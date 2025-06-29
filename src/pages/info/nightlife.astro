@@ -1,0 +1,89 @@
+---
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi-night-pano.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'Kusadasi Nightlife',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Experience the Vibrant Nightlife of Kusadasi"
+    subtitle="With its diverse array of bars, nightclubs, beachfront venues, and late-night eateries, Kusadasi offers an endless variety of options for nightlife enthusiasts."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+    Are you ready to immerse yourself in the lively and exciting nightlife
+     of Kusadasi? Situated on the stunning Aegean coast of Turkey, Kusadasi
+      is not only renowned for its beautiful beaches and historical 
+      sites but also for its vibrant nightlife scene that caters to 
+      all tastes and preferences. Whether you're looking for a relaxed 
+      evening at a beachfront bar or an energetic night of dancing until dawn,
+       Kusadasi has something for everyone.
+</p>  
+<div class="aspect-w-16 aspect-h-9">
+<iframe width="100%" height="480"  src="https://www.youtube.com/embed/L8uJotPBs8Q?si=XeSKMCQDDEAW0yg3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<br>
+<h2 class="text-2xl font-extrabold dark:text-white">Beachfront Bars and Cafes:</h2>
+<p class="text-base">One of the best ways to kick off your evening in Kusadasi
+     is by visiting one of the many beachfront bars and cafes scattered along
+      the coastline. Picture yourself sipping on a refreshing cocktail while 
+      watching the mesmerizing sunset over the Aegean Sea. With a laid-back
+       atmosphere and stunning views, these establishments offer the perfect
+        setting for a casual evening with friends or loved ones.
+</p><br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">  Lively Nightclubs:</h2>
+<p class="text-base"> For those seeking a more upbeat and energetic atmosphere,
+     Kusadasi boasts an array of nightclubs that come alive after dark.
+      Dance the night away to the latest hits played by talented DJs, or enjoy 
+      live music performances featuring local and international artists. 
+      With state-of-the-art sound systems and dazzling light displays, 
+      these nightclubs promise an unforgettable experience for party-goers of all ages.
+    
+</p><br>
+<h2 class="text-2xl font-extrabold dark:text-white">  Safety Tips:</h2>
+<p class="text-base"> 
+    While enjoying the nightlife in Kusadasi, 
+    it's essential to prioritize your safety and well-being.
+     Always travel in groups, especially when exploring unfamiliar areas at night.
+      Keep your belongings secure and be vigilant of your surroundings. 
+      If you plan to consume alcohol, do so responsibly and arrange for 
+      a designated driver or alternative transportation to ensure a safe journey home.
+    
+</p><br>
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

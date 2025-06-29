@@ -1,0 +1,74 @@
+---
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/kusadasi.jpg';
+import kusadasiinfo from "src/assets/images/kusadasi-info.jpg";
+import kusadasihist from "src/assets/images/kusadasi-history.jpg";
+import kusadasi10 from "src/assets/images/kusadasi-10.jpg";
+import kusadasiBeach from "src/assets/images/kusadasi-beach.jpg";
+import kusadasiMust from "src/assets/images/kusadasi-must-do.jpg";
+import kusadasiWeather from "src/assets/images/kusadasi-weather.jpg";
+import kusadasiNp from "src/assets/images/kusadasi-np.jpg";
+import kusadasiNight from "src/assets/images/kusadasi-night.jpg";
+import kusadasi1965 from "src/assets/images/kusadasi-1965.jpg";
+import KusadasiInfoFeatures from '~/components/widgets/KusadasiInfoFeatures.astro';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+const metadata = {
+  title: 'Kusadasi Info',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Kusadasi Info"
+    subtitle="Kusadasi is a coastal resort town in Turkey and serves as a prominent stop for cruise ships along the western Aegean Sea."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <div>
+<p class="text-base">
+
+  Kusadasi – one of Turkey’s beach resort town and a major cruise ship destination 
+  on the western Aegean coast - 90km south of Izmir - offers an excellent environment 
+  for an unforgettable holiday. Kusadasi is reputed for being one of the most attractive
+   cities of the Aegean and it is a jumping-off point as it is close to the important
+    historical sites including Ephesus, Temple of Artemis, Goddess Artemis, House of Virgin Mary,
+     Seven Sleepers, Didyma, Priene, Miletos. Kusadasi has a typical Mediterranean 
+     climate with hot summers and mild winters, providing a long tourism season. 
+     The city is bathed in sunshine for 300 days of the year. 
+</p>
+    </div>
+<br>
+    <p>In Kusadasi, you'll find beaches for swimming right in the city center. While there's a beach located in the heart of Kusadasi, the most renowned spot for swimming is Ladies Beach. Accessible within minutes by dolmus, it was historically segregated for men and women bathing separately, but this practice has now evolved. The expansive beach, lined with palm trees, offers various dining and refreshment options, making it a popular choice.</p>
+    <br>
+<p>For those seeking adventure, Kusadasi offers a plethora of excursions including boat trips, aqua parks, jeep safaris, scuba diving, and horseback riding, ensuring an action-packed family vacation. Alternatively, visitors can unwind on one of the many sandy beaches equipped with sunbeds, umbrellas, and water sports facilities.</p>
+<br>
+<p>Kusadasi is also a haven for shoppers, boasting a wide array of shops and bazaars selling everything from genuine fake designer goods to carpets, leather products, jewelry, souvenirs, silks, and clothing. The Grand Bazaar in Kusadasi is particularly noteworthy, being one of Turkey's largest shopping destinations and a delight to explore.</p>
+    </section>
+
+
+<KusadasiInfoFeatures />
+
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

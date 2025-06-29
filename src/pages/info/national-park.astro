@@ -1,0 +1,74 @@
+---
+import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import kusadasi from 'src/assets/images/dilek-national-park-kusadasi.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'National Park',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Kusadasi Dilek Peninsula National Park"
+    subtitle="Dilek Peninsula National Park, known locally as Milli Park, is located around 23km south of Kusadasi."
+    image={{
+      src: kusadasi,
+      alt: 'Kusadasi',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+    Dilek Peninsula National Park, also known as Milli Park locally,
+     is situated approximately 23km south of Kusadasi, in the town of 
+     Guzelcamli. Covering an expansive area of 28,000 hectares, the national 
+     park is located 8km from Davutlar and spans the entirety of Dilek Peninsula, 
+     stretching 20km in length and with a width of 6km. Renowned for its stunning 
+     beaches, we consider the National Park to harbor some of the most beautiful 
+     coastal areas in the region.
+</p>  
+<br>
+
+<p class="text-base">
+
+    Whether you prefer hiking along mountain trails or lounging on the beach, Dilek Peninsula National Park offers a slice of paradise for all. With its pristine environment, stunning vistas, and immaculate beaches, the park is an ideal spot for a picnic. Amenities such as benches, picnic tables, and restroom facilities are available for visitors' convenience, and there are also cafes for those who prefer not to pack a meal.
+</p>  
+<br>
+<p class="text-base">  The park boasts numerous beaches, including the Kalamaki beaches, which encompass several bays such as Icmeler, Kavakli, and Karapinar. For those seeking more adventure, there's the option of a canyon walk—a scenic trek through the park's majestic mountains, providing a serene escape from urban hustle and bustle.
+</p>  
+<br> 
+<p class="text-base">  Dilek Peninsula National Park is home to diverse flora and 
+    fauna, with an array of beautiful flowers, bird species, and wild
+     animals like wild pigs roaming the area. So don't be surprised if you encounter a
+      family of wild pigs during your visit — it's all part of the park's natural charm.
+</p>  
+<br>
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+
+</Layout>

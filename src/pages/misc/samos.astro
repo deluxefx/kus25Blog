@@ -1,0 +1,87 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/samos.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'Samos',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Samos Island, Greece"
+    subtitle="Samos Island: Serene Retreat for Kusadasi Adventurers"
+    image={{
+      src: photo,
+      alt: 'Samos Island, Greece',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+  
+Embark on a journey from Kusadasi to the captivating Samos Island, just a stone's 
+throw away from the Turkish coast. Accessible via a scenic ferry ride, Samos beckons 
+with its rich history, stunning landscapes, and vibrant culture. As a Kusadasi traveler,
+ you'll find yourself immersed in the allure of this Greek island, where every corner is
+  steeped in myth and legend.
+</p> <br>
+<p class="text-base">
+    Explore the island's ancient wonders, from the awe-inspiring ruins of Heraion, a 
+    UNESCO World Heritage Site dedicated to the goddess Hera, to the fascinating 
+    archaeological museum in Vathy, showcasing artifacts spanning millennia.
+     Take leisurely strolls through picturesque villages adorned with whitewashed houses
+      and vibrant bougainvillea, where time seems to stand still. Indulge in delicious 
+      Greek cuisine at seaside tavernas, savoring fresh seafood and local specialties 
+      accompanied by panoramic views of the Aegean Sea.
+</p> <br>
+
+    <p class="text-base">
+        Whether you're seeking sun-soaked beaches, cultural treasures, or simply a peaceful 
+        escape from the bustle of Kusadasi, Samos Island offers a perfect retreat for
+         every traveler. With its blend of history, natural beauty, and warm hospitality,
+          Samos invites you to uncover its hidden gems and create unforgettable memories
+           along the shores of the Eastern Mediterranean.
+</p> <br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

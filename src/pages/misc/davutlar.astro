@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import guzelcamli from 'src/assets/images/guzelcamli.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+const metadata = {
+  title: 'Davutlar and Guzelcamli',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Davutlar and Guzelcamli"
+    subtitle="Davutlar and Guzelcamli: Coastal Gems near Kusadasi"
+    image={{
+      src: guzelcamli,
+      alt: 'Davutlar Guzelcamli',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+<h2 class="text-2xl font-extrabold dark:text-white">Davutlar: A Hidden Gem Near Kusadasi</h2>
+<p class="text-base">
+    Just a short drive from bustling Kusadasi lies the tranquil village of Davutlar,
+     offering a refreshing escape for travelers seeking a quieter side of Turkey. 
+     Surrounded by verdant hills and olive groves, Davutlar invites visitors to 
+     unwind amidst breathtaking natural beauty. From its pristine beaches to ancient 
+     ruins scattered throughout the countryside, Davutlar promises a delightful blend 
+     of relaxation and exploration.
+</p> <br>
+<p class="text-base">  Travelers can wander through the remnants of ancient civilizations at 
+    nearby archaeological sites like Priene and Miletus, or embark on scenic hikes 
+    along winding trails that lead to panoramic views of the Aegean Sea. With its 
+    warm hospitality and authentic Turkish charm, Davutlar welcomes visitors to experience 
+    the rich culture and stunning landscapes that make this hidden gem a true delight for
+     travelers seeking an off-the-beaten-path adventure.
+</p> <br>  
+
+
+<h2 class="text-2xl font-extrabold dark:text-white">Guzelcamli: A Tranquil Retreat Near Kusadasi</h2>
+<p class="text-base">
+    Nestled along the idyllic coastline near Kusadasi, Guzelcamli beckons travelers with 
+    its tranquil ambiance and scenic beauty. Surrounded by lush greenery and azure waters, 
+    this charming village offers a serene escape from the bustling city life of Kusadasi.
+     With its pristine beaches and secluded coves, Guzelcamli provides the perfect
+      backdrop for relaxation and rejuvenation, where visitors can unwind on the sandy shores 
+      or take a leisurely stroll along the coastline.
+</p> <br>
+<p class="text-base">    
+    Beyond its natural splendor, Guzelcamli also boasts a rich history and cultural
+     heritage waiting to be explored. Ancient ruins, including the nearby city of Priene 
+     and the Byzantine castle of Pygale, offer glimpses into the region's storied past, 
+     providing travelers with a fascinating journey through time. Whether you're seeking
+      peaceful moments by the sea or a deeper understanding of Turkey's historical legacy,
+       Guzelcamli promises an unforgettable experience for every traveler.
+</p> <br>
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+<Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

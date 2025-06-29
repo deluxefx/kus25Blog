@@ -1,0 +1,116 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/hierapolis.jpg';
+import photo2 from 'src/assets/images/hierapolis2.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+
+const metadata = {
+  title: 'Hierapolis',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Hierapolis"
+    subtitle="Exploring Hierapolis: A Journey Through Ancient Marvels"
+    image={{
+      src: photo,
+      alt: 'Hierapolis',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+  
+    Nestled in southwestern Turkey, near the modern city of Denizli, 
+    lies the ancient city of Hierapolis, a UNESCO World Heritage Site 
+    brimming with historical significance and architectural wonders. Dating back to 
+    the Hellenistic period, Hierapolis flourished as a prominent Greco-Roman 
+    city and spa destination, boasting stunning ruins that continue to captivate visitors
+    from around the world.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">A Marvel of Ancient Engineering</h2>
+<p class="text-base">
+    Hierapolis is renowned for its well-preserved theater, which once accommodated
+     up to 15,000 spectators and served as a venue for theatrical performances and religious
+      ceremonies. The theater's remarkable acoustics and commanding views of the surrounding
+       landscape make it a must-see attraction for history enthusiasts and architecture aficionados
+        alike.
+</p> <br>
+
+<h2 class="text-2xl font-extrabold dark:text-white">Sacred Springs and Thermal Baths</h2>
+<p class="text-base">
+    One of the city's most iconic features is its sacred hot springs,
+     revered for their healing properties since antiquity. Visitors can explore the ancient 
+     thermal baths, where residents and pilgrims once sought relief from various ailments 
+     and ailments. Additionally, the intricately decorated Martyrium of St. Philip, 
+     dedicated to the Apostle Philip, stands as a testament to the city's religious 
+     significance and spiritual heritage.
+</p> <br>
+<Image src={photo2} alt="Priene" class="rounded-md mb-4"/>
+
+<h2 class="text-2xl font-extrabold dark:text-white">A Tapestry of History and Culture</h2>
+<p class="text-base">
+    As you wander through the ruins of Hierapolis, you'll encounter a rich tapestry
+     of history and culture, from the well-preserved necropolis, adorned with
+      elaborately carved sarcophagi, to the imposing remnants of the city's ancient walls. 
+      Don't miss the opportunity to stroll along the city's colonnaded streets, 
+      lined with grandiose monuments and temples, offering insight into the daily 
+      life and rituals of its inhabitants.
+
+
+</p> <br>
+
+<p class="text-base">
+Whether you're drawn to its architectural marvels, therapeutic hot springs, or rich history,
+ Hierapolis offers a truly immersive journey through the ancient world. As you explore
+  its captivating ruins and sacred sites, you'll find yourself transported back in time 
+  to a bygone era of splendor and significance, leaving you with a newfound appreciation
+   for Turkey's remarkable cultural heritage.
+
+
+</p> <br>
+
+
+
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>

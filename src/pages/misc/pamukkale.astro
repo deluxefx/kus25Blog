@@ -1,0 +1,103 @@
+---
+import { Image } from 'astro:assets';
+import KusadasiInfo from '~/components/widgets/AroundInfoFeatures.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Breadcrumb from '~/components/widgets/breadcrumb.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { ViewTransitions } from 'astro:transitions';
+import photo from 'src/assets/images/pamukkale.jpg';
+import photo2 from 'src/assets/images/pamukkale2.jpg';
+import photo3 from 'src/assets/images/pamukkale3.jpg';
+import BrakePad from 'astro-vtbot/components/BrakePad.astro';
+import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+
+
+
+const metadata = {
+  title: 'Pamukkale',
+};
+---
+<ProgressBar />
+{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
+<BrakePad duration={2000} />
+
+<Layout metadata={metadata}>
+  <ViewTransitions />
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline=""
+    title="Pamukkale"
+    subtitle="Pamukkale: Nature's Surreal Masterpiece"
+    image={{
+      src: photo,
+      alt: 'Pamukkale',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+
+<p class="text-base">
+
+
+</p> 
+
+
+
+<br>
+
+<p class="text-base">
+    Nestled in the southwest of Turkey lies a natural wonder that seems plucked from
+     the realms of fantasy: Pamukkale, meaning "Cotton Castle" in Turkish.
+      This enchanting destination boasts cascading terraces of milky white travertine terraces,
+       resembling a winter wonderland carved by Mother Nature herself.
+        Pamukkale's surreal landscape is the result of calcium-rich thermal waters that
+         have flowed down the mountainside for millennia, leaving behind
+          a breathtaking tableau of shimmering pools and terraces.
+</p> <br>
+<p class="text-base">
+    Visitors to Pamukkale are greeted by the sight of gleaming white terraces
+     that seemingly defy gravity as they cascade down the hillside. These terraces,
+      formed over thousands of years by the mineral-rich waters of the region's thermal springs,
+       have created a series of natural pools that beckon travelers to immerse themselves
+        in the rejuvenating waters. As the sunlight dances upon the terraces,
+         they take on a surreal, ethereal glow, casting a spellbinding 
+         spell over all who behold them.
+</p> <br>
+<Image src={photo2} alt="Pamukkale" class="rounded-md mb-4"/>
+    <p class="text-base">
+    But Pamukkale offers more than just its iconic terraces. Nearby, the ancient city
+     of Hierapolis awaits exploration, with its well-preserved ruins offering a glimpse
+      into the past. Wander among the remains of ancient temples, theaters, and bathhouses,
+       and marvel at the intricate mosaics that adorn the streets. At the Hierapolis
+        Archaeology Museum, delve deeper into the region's rich history with a collection 
+        of artifacts dating back thousands of years. And don't forget to visit the sacred pool,
+         where warm thermal waters bubble up from below, inviting visitors to take a 
+         dip and experience the healing properties of Pamukkale's legendary waters.
+</p> <br>
+<Image src={photo3} alt="Pamukkale" class="rounded-md mb-4"/>
+    <p class="text-base">
+    In addition to its natural and historical attractions, Pamukkale offers a range of
+     outdoor activities for adventurers of all ages. Hike along scenic trails that wind 
+     through the surrounding countryside, offering panoramic views of the terraces below. 
+     For those seeking an adrenaline rush, paragliding and hot air balloon rides provide 
+     a bird's-eye view of this otherworldly landscape. And after a day of exploration, indulge
+      in the region's culinary delights, with traditional Turkish dishes served in charming 
+      local restaurants. With its unique blend of natural beauty, history, and adventure, 
+      Pamukkale offers a truly unforgettable experience for travelers seeking to immerse 
+      themselves in the wonders of Turkey's Aegean region.
+</p> <br>
+
+
+    </section>
+
+
+    <KusadasiInfo />
+  
+  <!-- Breadcrumb -->
+
+
+  <Breadcrumb firstText="Around Kusadasi" firstLink="/misc" title={metadata.title} />
+
+</Layout>
