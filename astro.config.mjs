@@ -6,6 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import { VitePWA } from 'vite-plugin-pwa';
 import cloudflare from '@astrojs/cloudflare';
+import icon from 'astro-icon';
 
 import { manifest } from './src/utils/manifest';
 
@@ -33,8 +34,14 @@ export default defineConfig({
     sitemap(),
     tailwind(),
     robotsTxt(),
+    icon(),
   ],
   vite: {
+    resolve: {
+      alias: {
+        '~': new URL('./src/', import.meta.url).pathname,
+      },
+    },
     plugins: [
       VitePWA({
         registerType: 'autoUpdate',

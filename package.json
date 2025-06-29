@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "12.6.0",
+    "@astrolib/seo": "^1.0.0-beta.8",
     "astro-compressor": "0.4.1",
     "astro-icon": "1.1.5",
     "tailwind-merge": "3.3.1"
