@@ -1,7 +1,7 @@
 ---
 import Image from '@components/common/Image.astro'
 import Button from '@components/ui/Button.astro';
-import type { CallToAction } from '~/types';
+import type { CallToAction } from '@components/types';
 
 export interface Props {
   id?: string;
@@ -41,7 +41,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-slate-700 dark:text-gray-200 "
+              class="text-5xl md:text-6xl leading-tighter tracking-tighter mb-4 font-heading text-slate-700 dark:text-gray-200"
               set:html={title}
             />
             

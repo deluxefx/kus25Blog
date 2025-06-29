@@ -1,28 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
-
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import ephesus from 'src/assets/images/goddess-artemis.jpg';
-import ephesus2 from 'src/assets/images/goddess-artemis2.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import ephesus from '@components/assets/images/goddess-artemis.jpg';
+import ephesus2 from '@components/assets/images/goddess-artemis2.jpg';
+import KusadasiInfo from '@components/widgets/EphesusInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
 
 const metadata = {
   title: 'Goddess Artemis',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
+
+<Base meta_title="Goddess Artemis in Ephesus">
+  <Page title="Goddess Artemis in Ephesus">
+      <Hero
+    tagline=""
+    title="Goddess Artemis"
+    subtitle="Artemis of Ephesus: Unraveling the Mysteries of an Ancient Goddess"
+    image={{
+      src: ephesus,
+      alt: 'Ephesus',
+    }}
+  />
+
 
  
 
@@ -45,7 +48,7 @@ const metadata = {
 
 
 <br>
-<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4"/>  
+<Image src={ephesus2} alt="Ephesus" class="rounded-md mb-4 mx-auto"/>  
 <p class="text-base">
 The significance of Artemis in Ephesus extended beyond her role as a fertility deity. She was also worshipped as a protector of the city and its people, safeguarding them from harm and ensuring their prosperity. The Temple of Artemis, a grand structure adorned with intricate carvings and adorned with offerings from devotees, served as a focal point for religious ceremonies and rituals dedicated to the goddess.
 </p> 
@@ -80,4 +83,5 @@ The worship of Artemis in Ephesus also intersected with other religious traditio
 
 <Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

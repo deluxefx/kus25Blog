@@ -1,30 +1,21 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import ephesus from 'src/assets/images/ephesus-houses.jpg';
-import ephesus2 from 'src/assets/images/ephesus-houses2.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import ephesus from '@components/assets/images/ephesus-houses.jpg';
+import ephesus2 from '@components/assets/images/ephesus-houses2.jpg';
+import KusadasiInfo from '@components/widgets/EphesusInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
 
 const metadata = {
   title: 'Ephesus Terrace Houses',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
-
-  <Hero
+<Base meta_title="Ephesus Terrace Houses">
+  <Page title="Ephesus Terrace Houses">
+      <Hero
     tagline=""
     title="Ephesus Terrace Houses"
     subtitle="The Terrace Houses in Ephesus are upscale residences located adjacent to Curetes Street, across from the Temple of Hadrian."
@@ -34,8 +25,6 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
 
 <p class="text-base">
 
@@ -85,14 +74,12 @@ const metadata = {
 
 
 
-    </section>
-
-
-    <KusadasiInfo />
   
-  <!-- Breadcrumb -->
 
 
+       <KusadasiInfo />
 <Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+
+  </Page>
+</Base>
