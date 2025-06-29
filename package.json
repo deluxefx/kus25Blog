@@ -26,6 +26,9 @@
     "type": "git",
     "url": "https://github.com/gndx/ev0-astro-theme.dev.git"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
