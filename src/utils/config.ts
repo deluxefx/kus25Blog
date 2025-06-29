@@ -43,3 +43,7 @@ export const BLOG = {
     disabled: false,
   },
 };
+
+export const UI = {
+  theme: 'system',
+};
