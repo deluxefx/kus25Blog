@@ -1,34 +1,26 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import ephesus from 'src/assets/images/seven-sleepers.jpg';
-import ephesus2 from 'src/assets/images/seven-sleepers2.jpg';
-import ephesus3 from 'src/assets/images/seven-sleepers3.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import ephesus from '@components/assets/images/seven-sleepers.jpg';
+import ephesus2 from '@components/assets/images/seven-sleepers2.jpg';
+import ephesus3 from '@components/assets/images/seven-sleepers3.jpg';
+import KusadasiInfo from '@components/widgets/EphesusInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
 
 const metadata = {
   title: 'The Seven Sleepers of Ephesus',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
-
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="The Seven Sleepers of Ephesus"
+    title={metadata.title}
     subtitle="A Tale of Faith and Divine Intervention"
     image={{
       src: ephesus,
@@ -36,8 +28,12 @@ const metadata = {
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
+
 
 <p class="text-base">
 
@@ -103,6 +99,7 @@ const metadata = {
 <Image src={ephesus3} alt="Ephesus" class="rounded-md mb-4"/> 
 
 
+  
     </section>
 
 
@@ -113,4 +110,6 @@ const metadata = {
 
 <Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>
+

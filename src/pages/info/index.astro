@@ -1,47 +1,46 @@
 ---
-import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import kusadasi from 'src/assets/images/kusadasi.jpg';
-import kusadasiinfo from "src/assets/images/kusadasi-info.jpg";
-import kusadasihist from "src/assets/images/kusadasi-history.jpg";
-import kusadasi10 from "src/assets/images/kusadasi-10.jpg";
-import kusadasiBeach from "src/assets/images/kusadasi-beach.jpg";
-import kusadasiMust from "src/assets/images/kusadasi-must-do.jpg";
-import kusadasiWeather from "src/assets/images/kusadasi-weather.jpg";
-import kusadasiNp from "src/assets/images/kusadasi-np.jpg";
-import kusadasiNight from "src/assets/images/kusadasi-night.jpg";
-import kusadasi1965 from "src/assets/images/kusadasi-1965.jpg";
-import KusadasiInfoFeatures from '~/components/widgets/KusadasiInfoFeatures.astro';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/KusadasiInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import ephesus from '@components/assets/images/kusadasi.jpg';
+import kusadasiinfo from '@components/assets/images/kusadasi-info.jpg';
+// import kusadasihist from '@components/assets/images/kusadasi-history.jpg';
+// import kusadasi10 from '@components/assets/images/kusadasi-10.jpg';
+// import kusadasiBeach from '@components/assets/images/kusadasi-beach.jpg';
+// import kusadasiMust from '@components/assets/images/kusadasi-must-do.jpg';
+// import kusadasiWeather from '@components/assets/images/kusadasi-weather.jpg';
+// import kusadasiNp from '@components/assets/images/kusadasi-np.jpg';
+// import kusadasiNight from '@components/assets/images/kusadasi-night.jpg';
+// import kusadasi1965 from '@components/assets/images/kusadasi-1965.jpg';
 
 const metadata = {
   title: 'Kusadasi Info',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="Kusadasi Info"
+    title={metadata.title}
     subtitle="Kusadasi is a coastal resort town in Turkey and serves as a prominent stop for cruise ships along the western Aegean Sea."
     image={{
-      src: kusadasi,
+      src: ephesus,
       alt: 'Kusadasi',
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
+
   <div>
 <p class="text-base">
 
@@ -63,12 +62,13 @@ const metadata = {
 <p>Kusadasi is also a haven for shoppers, boasting a wide array of shops and bazaars selling everything from genuine fake designer goods to carpets, leather products, jewelry, souvenirs, silks, and clothing. The Grand Bazaar in Kusadasi is particularly noteworthy, being one of Turkey's largest shopping destinations and a delight to explore.</p>
     </section>
 
-
-<KusadasiInfoFeatures />
-
+<br>
+    <KusadasiInfo />
+  
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

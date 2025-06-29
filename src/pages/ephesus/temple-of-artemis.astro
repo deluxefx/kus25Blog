@@ -1,33 +1,25 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/EphesusInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import ephesus from 'src/assets/images/temple-of-artemis.jpg';
-import ephesus2 from 'src/assets/images/temple-of-artemis2.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import ephesus from '@components/assets/images/temple-of-artemis.jpg';
+import ephesus2 from '@components/assets/images/temple-of-artemis2.jpg';
+import KusadasiInfo from '@components/widgets/EphesusInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
 
 const metadata = {
   title: 'The Temple of Artemis',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
-
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="The Temple of Artemis"
+    title={metadata.title}
     subtitle="The Temple of Artemis: Unraveling the Mysteries of an Ancient Wonder"
     image={{
       src: ephesus,
@@ -35,8 +27,15 @@ const metadata = {
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
+
+
+
+
 
 <p class="text-base">
 
@@ -103,6 +102,7 @@ Today, little remains of the Temple of Artemis except for a few scattered ruins 
 </p> <br>
 
 
+
     </section>
 
 
@@ -113,4 +113,5 @@ Today, little remains of the Temple of Artemis except for a few scattered ruins 
 
 <Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

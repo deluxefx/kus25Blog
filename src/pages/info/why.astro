@@ -1,42 +1,41 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import kusadasi from 'src/assets/images/kusadasi-pano-1.jpg';
-import kusadasi2 from 'src/assets/images/kusadasi-beach-1.jpg';
-import kusadasi3 from 'src/assets/images/kusadasi-food.jpg';
-import kusadasi4 from 'src/assets/images/kusadasi-pano-3.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/KusadasiInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import kusadasi from '@components/assets/images/kusadasi-pano-1.jpg';
+import kusadasi2 from '@components/assets/images/kusadasi-beach-1.jpg';
+import kusadasi3 from '@components/assets/images/kusadasi-food.jpg';
+
 
 
 const metadata = {
-  title: '10 Reasons to Visit Kusadasi'
+  title: '10 Reasons to Visit Kusadasi',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="10 Reasons to Visit Kusadasi"
-    subtitle="Here are 10 compelling reasons to visit. Kusadasi is perfect for singles, couples, families, and retirees alike, catering to diverse preferences and interests.."
+    title={metadata.title}
+    subtitle="Here are 10 compelling reasons to visit. Kusadasi is perfect for singles, couples, families, and retirees alike, catering to diverse preferences and interests."
     image={{
       src: kusadasi,
       alt: 'Kusadasi',
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
+
 
 <p class="text-base">
 
@@ -52,14 +51,13 @@ const metadata = {
 <p class="text-base">   <b> 7. Natural Beauty: </b>Discover the breathtaking landscapes of the region, including lush green hills, serene lakes, and picturesque coastal cliffs.</p><br>
 <p class="text-base">   <b> 8. Family-Friendly Attractions:</b> Kusadasi offers plenty of family-friendly attractions, including water parks, amusement parks, and dolphin shows, ensuring fun for all ages.</p><br>
 <p class="text-base">   <b> 9. Turkish Hospitality:</b> Experience the warm hospitality of the Turkish people, known for their friendliness and welcoming nature towards visitors.</p><br>
-<Image src={kusadasi4} alt="Turkish cuisine" class="rounded-md mb-4"/>
+
 <p class="text-base">   <b> 10. Cruise Port:</b> As a major cruise ship destination, Kusadasi welcomes thousands of visitors each year, offering easy access to nearby attractions and excursions.</p><br>
 
     
 <br>
 
 <br>
-
 
 
     </section>
@@ -70,6 +68,8 @@ const metadata = {
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>
+

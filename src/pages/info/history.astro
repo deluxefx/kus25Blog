@@ -1,29 +1,26 @@
 ---
-import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import kusadasi from 'src/assets/images/kusadasi-history-big-2.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/KusadasiInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import kusadasi from '@components/assets/images/kusadasi-history-big-2.jpg';
+import kusadasiinfo from '@components/assets/images/kusadasi-info.jpg';
 
 
 const metadata = {
   title: 'History of Kusadasi',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="History of Kusadasi"
+    title={metadata.title}
     subtitle="The initial settlements in Kusadasi were established by the Lelegians and Carians, who migrated from central Anatolia around 3000 BC."
     image={{
       src: kusadasi,
@@ -31,8 +28,11 @@ const metadata = {
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
 
 <p class="text-base">
 
@@ -108,7 +108,6 @@ renowned for its pristine sandy beaches and crystalline waters.
 </p>
 
 
-    </section>
 
 
     <KusadasiInfo />
@@ -116,6 +115,7 @@ renowned for its pristine sandy beaches and crystalline waters.
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

@@ -1,37 +1,31 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import kusadasi from 'src/assets/images/kusadasi-beaches.jpg';
-import kusadasi2 from 'src/assets/images/kusadasi-beach.jpg';
-import kusadasi3 from 'src/assets/images/beach-downtown.jpg';
-import kusadasi4 from 'src/assets/images/kusadasi-long-beach.jpg';
-import kusadasi5 from 'src/assets/images/kusadasi-gold.jpg';
-import kusadasi6 from 'src/assets/images/kusadasi-silver.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/KusadasiInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import kusadasi from '@components/assets/images/kusadasi-beaches.jpg';
+import kusadasi2 from '@components/assets/images/kusadasi-beach.jpg';
+import kusadasi3 from '@components/assets/images/beach-downtown.jpg';
+import kusadasi4 from '@components/assets/images/kusadasi-long-beach.jpg';
+import kusadasi5 from '@components/assets/images/kusadasi-gold.jpg';
+import kusadasi6 from '@components/assets/images/kusadasi-silver.jpg';
 
 
 
 const metadata = {
-  title: 'Kusadasi Beaches'
+  title: 'Kusadasi Beaches',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
 
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="Kusadasi Beaches"
+    title={metadata.title}
     subtitle="There are numerous beaches in Kusadasi, All with one thing in common crystal clear waters and picture perfect weather."
     image={{
       src: kusadasi,
@@ -39,8 +33,12 @@ const metadata = {
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
+
 
 <p class="text-base">
 
@@ -51,10 +49,10 @@ const metadata = {
 
     Located between the Harbor and the Marina, this spot is highly favored due to its convenient location near the town center and numerous hotels. Offering stunning views of Pigeon Island and the impressive cruise ships in the port, it's an ideal spot to soak up the sun and enjoy the surroundings. Amenities include sunbeds, beach umbrellas, and a cozy beachside cafe, while across the street, you'll find a variety of cafes and shops lining the boulevard.
 </p><br>
-<Image src={kusadasi3} alt="Kusadasi." class="rounded-md mb-4"/>
+<Image src={kusadasi3} alt="Kusadasi." class="rounded-md mb-4 mx-auto"/>
 <h2 class="text-2xl font-extrabold dark:text-white">Ladies Beach</h2>
 
-<Image src={kusadasi2} alt="Kusadasi." class="rounded-md mb-4"/>
+<Image src={kusadasi2} alt="Kusadasi." class="rounded-md mb-4 mx-auto"/>
 <p class="text-base">
 
     Ladies Beach, known as Kadinlar Denizi in Turkish, stands out as one of Kusadasi's most popular and bustling beaches. Initially designated exclusively for female bathers, the beach is now open to all, offering a vibrant atmosphere with its palm-lined promenade adorned with shops, bars, cafes, and hotels, creating a resort-like ambiance. Renowned for its prime location near Kusadasi's center, the beach boasts clean, shallow waters, a kilometer-long stretch of sandy shoreline, and various amenities including water sports, changing rooms, umbrellas, sunbeds, and restrooms. Lifeguards are on duty from 08:00 to 19:00 for added safety.
@@ -109,7 +107,6 @@ const metadata = {
 <br>
 
 
-
     </section>
 
 
@@ -118,6 +115,7 @@ const metadata = {
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>

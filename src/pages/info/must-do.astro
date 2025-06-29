@@ -1,72 +1,65 @@
 ---
-import { Image } from 'astro:assets';
-import KusadasiInfo from '~/components/widgets/KusadasiInfoFeatures.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
-import { ViewTransitions } from 'astro:transitions';
-import kusadasi from 'src/assets/images/kusadasi-must-dos.jpg';
-import kusadasi1 from 'src/assets/images/must-do/must-do-1.jpg';
-import kusadasi2 from 'src/assets/images/must-do/must-do-2.jpg';
-import kusadasi3 from 'src/assets/images/must-do/must-do-3.jpg';
-import kusadasi4 from 'src/assets/images/must-do/must-do-4.jpg';
-import kusadasi5 from 'src/assets/images/must-do/must-do-5.jpg';
-import kusadasi6 from 'src/assets/images/must-do/must-do-6.jpg';
-import kusadasi7 from 'src/assets/images/must-do/must-do-7.jpg';
-import kusadasi8 from 'src/assets/images/must-do/must-do-8.jpg';
-import kusadasi9 from 'src/assets/images/must-do/must-do-9.jpg';
-import kusadasi10 from 'src/assets/images/must-do/must-do-10.jpg';
-import kusadasi11 from 'src/assets/images/must-do/must-do-11.jpg';
-import kusadasi12 from 'src/assets/images/must-do/must-do-12.jpg';
-import kusadasi13 from 'src/assets/images/must-do/must-do-13.jpg';
-import kusadasi14 from 'src/assets/images/must-do/must-do-14.jpg';
-import kusadasi15 from 'src/assets/images/must-do/must-do-15.jpg';
-import kusadasi16 from 'src/assets/images/must-do/must-do-16.jpg';
-import kusadasi17 from 'src/assets/images/must-do/must-do-17.jpg';
-import kusadasi18 from 'src/assets/images/must-do/must-do-18.jpg';
-import kusadasi19 from 'src/assets/images/must-do/must-do-19.jpg';
-import kusadasi20 from 'src/assets/images/must-do/must-do-20.jpg';
-import kusadasi21 from 'src/assets/images/must-do/must-do-21.jpg';
-import kusadasi22 from 'src/assets/images/must-do/must-do-22.jpg';
-import kusadasi23 from 'src/assets/images/must-do/must-do-23.jpg';
-import kusadasi24 from 'src/assets/images/must-do/must-do-24.jpg';
-import kusadasi25 from 'src/assets/images/must-do/must-do-25.jpg';
-import kusadasi26 from 'src/assets/images/must-do/must-do-26.jpg';
-import kusadasi27 from 'src/assets/images/must-do/must-do-27.jpg';
-import kusadasi28 from 'src/assets/images/must-do/must-do-28.jpg';
-import kusadasi29 from 'src/assets/images/must-do/must-do-29.jpg';
-import kusadasi30 from 'src/assets/images/must-do/must-do-30.jpg';
-import kusadasi31 from 'src/assets/images/must-do/must-do-31.jpg';
-import kusadasi32 from 'src/assets/images/must-do/must-do-32.jpg';
-import kusadasi33 from 'src/assets/images/must-do/must-do-33.jpg';
-import kusadasi34 from 'src/assets/images/must-do/must-do-34.jpg';
-import kusadasi35 from 'src/assets/images/must-do/must-do-35.jpg';
-import kusadasi36 from 'src/assets/images/must-do/must-do-36.jpg';
-import kusadasi37 from 'src/assets/images/must-do/must-do-37.jpg';
-import kusadasi38 from 'src/assets/images/must-do/must-do-38.jpg';
-import kusadasi39 from 'src/assets/images/must-do/must-do-39.jpg';
-import kusadasi40 from 'src/assets/images/must-do/must-do-40.jpg';
-import kusadasi41 from 'src/assets/images/must-do/must-do-41.jpg';
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
-
+import Base from '@layouts/Base.astro';
+import Page from '@layouts/Page.astro';
+import Breadcrumb from '@components/widgets/breadcrumb.astro';
+import Hero from '@components/widgets/Hero.astro'
+import KusadasiInfo from '@components/widgets/KusadasiInfoFeatures.astro';
+import Image from '@components/common/Image.astro';
+import kusadasi from '@components/assets/images/kusadasi-must-dos.jpg';
+import kusadasi1 from '@components/assets/images/must-do/must-do-1.jpg';
+import kusadasi2 from '@components/assets/images/must-do/must-do-2.jpg';
+import kusadasi3 from '@components/assets/images/must-do/must-do-3.jpg';
+import kusadasi4 from '@components/assets/images/must-do/must-do-4.jpg';
+import kusadasi5 from '@components/assets/images/must-do/must-do-5.jpg';
+import kusadasi6 from '@components/assets/images/must-do/must-do-6.jpg';
+import kusadasi7 from '@components/assets/images/must-do/must-do-7.jpg';
+import kusadasi8 from '@components/assets/images/must-do/must-do-8.jpg';
+import kusadasi9 from '@components/assets/images/must-do/must-do-9.jpg';
+import kusadasi10 from '@components/assets/images/must-do/must-do-10.jpg';
+import kusadasi11 from '@components/assets/images/must-do/must-do-11.jpg';
+import kusadasi12 from '@components/assets/images/must-do/must-do-12.jpg';
+import kusadasi13 from '@components/assets/images/must-do/must-do-13.jpg';
+import kusadasi14 from '@components/assets/images/must-do/must-do-14.jpg';
+import kusadasi15 from '@components/assets/images/must-do/must-do-15.jpg';
+import kusadasi16 from '@components/assets/images/must-do/must-do-16.jpg';
+import kusadasi17 from '@components/assets/images/must-do/must-do-17.jpg';
+import kusadasi18 from '@components/assets/images/must-do/must-do-18.jpg';
+import kusadasi19 from '@components/assets/images/must-do/must-do-19.jpg';
+import kusadasi20 from '@components/assets/images/must-do/must-do-20.jpg';
+import kusadasi21 from '@components/assets/images/must-do/must-do-21.jpg';
+import kusadasi22 from '@components/assets/images/must-do/must-do-22.jpg';
+import kusadasi23 from '@components/assets/images/must-do/must-do-23.jpg';
+import kusadasi24 from '@components/assets/images/must-do/must-do-24.jpg';
+import kusadasi25 from '@components/assets/images/must-do/must-do-25.jpg';
+import kusadasi26 from '@components/assets/images/must-do/must-do-26.jpg';
+import kusadasi27 from '@components/assets/images/must-do/must-do-27.jpg';
+import kusadasi28 from '@components/assets/images/must-do/must-do-28.jpg';
+import kusadasi29 from '@components/assets/images/must-do/must-do-29.jpg';
+import kusadasi30 from '@components/assets/images/must-do/must-do-30.jpg';
+import kusadasi31 from '@components/assets/images/must-do/must-do-31.jpg';
+import kusadasi32 from '@components/assets/images/must-do/must-do-32.jpg';
+import kusadasi33 from '@components/assets/images/must-do/must-do-33.jpg';
+import kusadasi34 from '@components/assets/images/must-do/must-do-34.jpg';
+import kusadasi35 from '@components/assets/images/must-do/must-do-35.jpg';
+import kusadasi36 from '@components/assets/images/must-do/must-do-36.jpg';
+import kusadasi37 from '@components/assets/images/must-do/must-do-37.jpg';
+import kusadasi38 from '@components/assets/images/must-do/must-do-38.jpg';
+import kusadasi39 from '@components/assets/images/must-do/must-do-39.jpg';
+import kusadasi40 from '@components/assets/images/must-do/must-do-40.jpg';
+import kusadasi41 from '@components/assets/images/must-do/must-do-41.jpg';
 
 const metadata = {
-  title: 'Things to do in Kusadasi',
+  title: 'Must Do\'s in Kusadasi',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
 
 
-<Layout metadata={metadata}>
-  <ViewTransitions />
-  <!-- Hero Widget ******************* -->
-
-  <Hero
+<Base meta_title={metadata.title}>
+  
+  <Page title={metadata.title}>
+      <Hero
     tagline=""
-    title="Must Do's in Kusadasi"
+    title={metadata.title}
     subtitle="Discover the Vibrant Charm of Kusadasi: 41 Must-Do Activities for Your Holiday."
     image={{
       src: kusadasi,
@@ -74,8 +67,11 @@ const metadata = {
     }}
   />
 
+
+ 
+
   <!-- Features2 Widget ************** -->
-  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl">
+  <section class="px-4 md:px-6 py-2 sm:py-2 lg:py-2 mx-auto max-w-4xl"></section>
 
 <p class="text-base">
     Explore the vibrant allure of Kusadasi,
@@ -516,6 +512,7 @@ const metadata = {
   <!-- Breadcrumb -->
 
 
-<Breadcrumb firstText="Kusadasi" firstLink="/info" title={metadata.title} />
+<Breadcrumb firstText="Ephesus" firstLink="/ephesus" title={metadata.title} />
 
-</Layout>
+  </Page>
+</Base>
