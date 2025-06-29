@@ -1,11 +1,9 @@
 /* TEAM */
-	Chef: Oscar Barajas Tavares
-	Contact: oscar [at] gndx.dev
-	Twitter: @gndx
-	From: Medellín, Antioquia, Colombia.
+	Chef: Umit Yoruk
+	Contact: kusadasiguy [at] gmail.com
 
 /* THANKS */
-	Template: EV0 Theme
+	Template: iamtravelr
 	GitHub: @gndx
 
 /* SITE */
