@@ -1,22 +1,17 @@
 ---
 
 
-import Hero from '~/components/widgets/Hero.astro';
-import Breadcrumb from '~/components/widgets/breadcrumb.astro';
-import Layout from '~/layouts/PageLayout.astro';
+import Hero from '../../components/widgets/Hero.astro';
+import Breadcrumb from '../../components/widgets/breadcrumb.astro';
+import Layout from '../../layouts/PageLayout.astro';
 import { ViewTransitions } from 'astro:transitions';
-
-import BrakePad from 'astro-vtbot/components/BrakePad.astro';
-import ProgressBar from 'astro-vtbot/components/ProgressBar.astro';
 
 
 const metadata = {
   title: 'Connect with me',
 };
 ---
-<ProgressBar />
-{/* To observe the effect in DEV mode it is necessary to simulate 2000ms loading time */}
-<BrakePad duration={2000} />
+<!-- To observe the effect in DEV mode it is necessary to simulate 2000ms loading time -->
 
 <Layout metadata={metadata}>
   <ViewTransitions />
